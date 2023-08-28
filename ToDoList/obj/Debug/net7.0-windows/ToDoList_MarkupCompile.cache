@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\Programowanie\c sharp\ToDoList\obj\Debug\net7.0-windows\
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\
 ToDoList
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-G:\Programowanie\c sharp\ToDoList\App.xaml
-21850626265
+G:\Programowanie\c sharp\ToDoApp\ToDoList\App.xaml
+3959200659
 
-13444495094
+14-1629887173
 232-463804504
-MainWindow.xaml;Pages\ListPage.xaml;
+MainWindow.xaml;Pages\ListView.xaml;Pages\MenuView.xaml;
 
 False
 

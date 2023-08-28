@@ -6,7 +6,17 @@
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Viewbox x:Name = "Context" Margin="0,0,0,0">
-        <Frame x:Name="MainContext" Source="/Pages/ListPage.xaml" />
-    </Viewbox>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+            <Frame Grid.Row="0" x:Name="Menu" Source="/Pages/MenuView.xaml"/>
+            <Frame Grid.Row="1" x:Name="MainContext" Source="/Pages/ListView.xaml" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+            <Frame Grid.Row="2"  />
+    </Grid>
+
+ 
 </Window>

@@ -3791,11 +3791,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Programowanie\\c sharp\\ToDoList\\ToDoList.csproj",
+      "projectUniqueName": "G:\\Programowanie\\c sharp\\ToDoApp\\ToDoList\\ToDoList.csproj",
       "projectName": "ToDoList",
-      "projectPath": "G:\\Programowanie\\c sharp\\ToDoList\\ToDoList.csproj",
+      "projectPath": "G:\\Programowanie\\c sharp\\ToDoApp\\ToDoList\\ToDoList.csproj",
       "packagesPath": "C:\\Users\\mani3\\.nuget\\packages\\",
-      "outputPath": "G:\\Programowanie\\c sharp\\ToDoList\\obj\\",
+      "outputPath": "G:\\Programowanie\\c sharp\\ToDoApp\\ToDoList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

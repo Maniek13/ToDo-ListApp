@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g6iw1akaBt6FelkxNwDXtwj2RmyMfwnwlPul31efr0P4lyLgnjgQ0/hsUZAWRELzQWVt4Ole+aE7FY0CCyvWXg==",
+  "dgSpecHash": "TWd90IGUZbwqZHRrjIuvbwwTjEYrlQw6lF9hOFCA7aJvEiTnVi40v78SZiqCar9wNqbuIx2F+FA0LIH7swwIFw==",
   "success": true,
-  "projectFilePath": "G:\\Programowanie\\c sharp\\ToDoList\\ToDoList.csproj",
+  "projectFilePath": "G:\\Programowanie\\c sharp\\ToDoApp\\ToDoList\\ToDoList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mani3\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mani3\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
