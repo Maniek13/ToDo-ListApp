@@ -1,6 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 
-namespace ToDoList.Views
+namespace ToDoList
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

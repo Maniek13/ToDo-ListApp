@@ -1,13 +1,14 @@
-﻿<Page x:Class="ToDoList.Pages.MenuView"
+﻿<UserControl x:Class="ToDoList.Pages.MenuView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:model="clr-namespace:ToDoList.Models" 
       >
     <Menu Height="50">
-        <MenuItem Header="Task" Height="50">
-        <MenuItem Header="Add" Height="50"/>
-        <MenuItem Header="Edit" Height="50"/>
+        <MenuItem Header="Menu" Height="50">
+            <MenuItem Header="Show tasks" Height="50" Click="ShowTasksList_BtnClick"/>
+            <MenuItem Header="Add task" Height="50"/>
+            <MenuItem Header="Edit task" Height="50"/>
         </MenuItem>
     </Menu>
 
-</Page>
+</UserControl>

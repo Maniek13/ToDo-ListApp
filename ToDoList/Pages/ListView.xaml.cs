@@ -6,7 +6,7 @@ using ToDoList.ViewModels;
 
 namespace ToDoList.Pages
 {
-    public sealed partial class ListView : Page
+    public sealed partial class ListView : UserControl
     {
         internal ListViewViewModel ViewModel { get; set; }
         public ListView()
