@@ -10,10 +10,10 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\MenuView.xaml">
+    <Page Update="Views\MenuUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\ListView.xaml">
+    <Page Update="Views\ListUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

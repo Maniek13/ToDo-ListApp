@@ -6,15 +6,12 @@
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-            <Frame Grid.Row="0" x:Name="Menu" Source="/Pages/MenuView.xaml"/>
-            <Frame Grid.Row="1" x:Name="MainContext"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+        <Frame Grid.Row="0" x:Name="Menu" Source="/Views/MenuUserControl.xaml"/>
+        <Frame Grid.Row="1" x:Name="MainContext"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
     </Grid>
-
- 
 </Window>

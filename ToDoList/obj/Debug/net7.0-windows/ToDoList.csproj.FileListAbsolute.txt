@@ -180,7 +180,10 @@ G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\refint\ToDoLi
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\ToDoList.pdb
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\ToDoList.genruntimeconfig.cache
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\ref\ToDoList.dll
-G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Pages\MenuView.g.cs
-G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Pages\MenuView.baml
-G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Pages\ListView.g.cs
-G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Pages\ListView.baml
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\ListUserControl.g.cs
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\MenuUserControl.g.cs
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\ListUserControl.baml
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\MenuUserControl.baml
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\Icons\list.png
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\Icons\add.png
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\Icons\edit.png
