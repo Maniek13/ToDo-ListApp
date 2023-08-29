@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
+        
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Frame Grid.Row="0" x:Name="Menu" Source="/Views/MenuUserControl.xaml"/>
-        <Frame Grid.Row="1" x:Name="MainContext"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+        <Frame Grid.Row="1" x:Name="MainContext"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

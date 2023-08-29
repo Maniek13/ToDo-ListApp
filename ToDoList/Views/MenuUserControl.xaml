@@ -1,26 +1,20 @@
 ﻿<UserControl x:Class="ToDoList.Views.MenuUserControl"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:model="clr-namespace:ToDoList.Models" 
+        xmlns:model="clr-namespace:ToDoList.Views" 
       >
-    <Menu Height="25" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="0,0,0,0.5" Background="WhiteSmoke">
-        <MenuItem Header="Menu" VerticalAlignment="Center" Height="25" BorderBrush="Gray" BorderThickness="0,0,0.25,0">
+    <Menu Height="25" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="0,0,0,0.5" Background="WhiteSmoke" >
+        <MenuItem Header="Menu" VerticalAlignment="Center" Height="25" BorderBrush="Gray" BorderThickness="0,0,0.25,0" >
             <MenuItem Header="Show tasks" Height="25" Click="ShowTasksList_BtnClick">
                 <MenuItem.Icon>
-                    <Image Source="/Views/list.png"/>
+                    <Image Source="/Views/Icons/list.png"/>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Add task" Height="25">
+            <MenuItem Header="Add task" Height="25" Click="AddTasksList_BtnClick">
                 <MenuItem.Icon>
-                    <Image Source="/Views/add.png"/>
-                </MenuItem.Icon>
-            </MenuItem>
-            <MenuItem Header="Edit task" Height="25">
-                <MenuItem.Icon>
-                    <Image Source="/Views/edit.png"/>
+                    <Image Source="/Views/Icons/add.png"/>
                 </MenuItem.Icon>
             </MenuItem>
         </MenuItem>
     </Menu>
-
 </UserControl>

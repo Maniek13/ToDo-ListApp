@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows;
 using ToDoList.Models;
+using ToDoList.Views;
 
 namespace ToDoList.ViewModels
 {
@@ -30,7 +33,9 @@ namespace ToDoList.ViewModels
 
         public void EditTask(Task task)
         {
-            throw new NotImplementedException();
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            if (mainWindow != null)
+                mainWindow.MainContext.Content = new EditTaskUserControl(task);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using ToDoList.Models;
@@ -15,7 +16,7 @@ namespace ToDoList.Views
             DataContext = ViewModel = new ListOfTasksUserControlViewModel();
         }
 
-        private void Edit_Click(object sender, RoutedEventArgs e)
+        internal void Edit_BtnClick(object sender, RoutedEventArgs e)
         {
             try
             {
