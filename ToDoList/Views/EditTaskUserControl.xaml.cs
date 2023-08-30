@@ -1,48 +1,57 @@
-﻿using System.Windows;
+﻿using System;
+using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
 using ToDoList.Models;
+using ToDoList.ViewModels;
 
 namespace ToDoList.Views
 {
-    /// <summary>
-    /// Interaction logic for EditItemUserControl.xaml
-    /// </summary>
     public partial class EditTaskUserControl : UserControl
     {
+        private readonly MainWindow mainWindow;
+        private EditTasksUserControlViewModel ViewModel { get; set; }
 
+        #pragma warning disable CS8601, CS8618
         public EditTaskUserControl(Task task)
         {
-            TaskValue = task;
             InitializeComponent();
-            DataContext = this;
+            TaskValue = task;
+            DataContext = ViewModel = new EditTasksUserControlViewModel();
+            EditForm.DataContext = this;
+            mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
         }
+        #pragma warning restore CS8601, CS8618
 
-        internal static readonly DependencyProperty TaskValueProperty =
+        private static readonly DependencyProperty TaskValueProperty =
         DependencyProperty.Register(
             name: "TaskValue",
             propertyType: typeof(Task),
             ownerType: typeof(EditTaskUserControl),
             typeMetadata: new FrameworkPropertyMetadata(defaultValue: new Task()));
 
-        internal Task TaskValue
+        private Task TaskValue
         {
-            get { return (Task)GetValue(TaskValueProperty); }
+            get {  return (Task)GetValue(TaskValueProperty); }
             set { SetValue(TaskValueProperty, value); }
         }
-
-
-        internal void ChangeTask_BtnClick(object sender, RoutedEventArgs e)
+        private void TextChangedEventHandler(object sender, TextChangedEventArgs args)
         {
-            var task = ((Button)sender).Tag as Task?;
+            mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+        }
 
-    
-            TaskValue = new Task()
+        private void EditTask_BtnClick(object sender, RoutedEventArgs e)
+        {
+            try
             {
-                Id = 0,
-                Name = "not implement"
-
-            };
+                mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+                ViewModel.EditTask(TaskValue);
+            }
+            catch(Exception ex)
+            {
+                mainWindow.ErrorMsg.Text = ex.Message;
+                mainWindow.ErrorMsg.Visibility = Visibility.Visible;
+            }
         }
     }
 }

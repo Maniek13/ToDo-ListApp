@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -7,22 +6,25 @@ namespace ToDoList.Views
 {
     public partial class MenuUserControl : UserControl
     {
+        private readonly MainWindow mainWindow;
+
+        #pragma warning disable CS8601, CS8618
         public MenuUserControl()
         {
             InitializeComponent();
+            mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
         }
+        #pragma warning restore CS8601, CS8618
 
-        internal void ShowTasksList_BtnClick(object sender, RoutedEventArgs e) 
+        private void ShowTasksList_BtnClick(object sender, RoutedEventArgs e) 
         {
-            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-            if(mainWindow != null)
-                mainWindow.MainContext.Content = new ListOfTasksUserControl();
+            mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+            mainWindow.MainContext.Content = new ListOfTasksUserControl();
         }
-        internal void AddTasksList_BtnClick(object sender, RoutedEventArgs e)
+        private void AddTasksList_BtnClick(object sender, RoutedEventArgs e)
         {
-            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-            if (mainWindow != null)
-                mainWindow.MainContext.Content = new AddTaskUserControl();
+            mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+            mainWindow.MainContext.Content = new AddTaskUserControl();
         }
     }
 }

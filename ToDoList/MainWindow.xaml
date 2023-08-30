@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         
         Title="MainWindow" Height="450" Width="800">
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="25" />
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Frame Grid.Row="0" x:Name="Menu" Source="/Views/MenuUserControl.xaml"/>
-        <Frame Grid.Row="1" x:Name="MainContext"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden"/>
-    </Grid>
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" x:Name="Menu" Source="/Views/MenuUserControl.xaml"/>
+            <Frame Grid.Row="1" x:Name="MainContext"  HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+        </Grid>
+        <TextBlock DockPanel.Dock="Bottom"  x:Name="ErrorMsg" Foreground="red" Height="50" Panel.ZIndex="100" TextWrapping="Wrap" Visibility="Hidden" VerticalAlignment="Bottom" />
+    </DockPanel>
 </Window>

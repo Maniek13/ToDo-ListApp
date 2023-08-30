@@ -9,12 +9,13 @@ namespace ToDoList.ViewModels
 {
     public sealed class ListOfTasksUserControlViewModel
     {
+#pragma warning disable CS8601, CS8618
         private ObservableCollection<Task> _tasks {  get; set; }
+#pragma warning restore S8601, CS8618
         public ObservableCollection<Task> Tasks { get { return _tasks; } }
 
-        public ListOfTasksUserControlViewModel() 
+        public void GetList()
         {
-
             _tasks = new ObservableCollection<Task>
             {
                 new Task()
@@ -28,14 +29,6 @@ namespace ToDoList.ViewModels
                     Name= "stara"
                 }
             };
-
-        }
-
-        public void EditTask(Task task)
-        {
-            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-            if (mainWindow != null)
-                mainWindow.MainContext.Content = new EditTaskUserControl(task);
         }
     }
 }

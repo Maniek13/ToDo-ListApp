@@ -7,27 +7,33 @@ using ToDoList.ViewModels;
 
 namespace ToDoList.Views
 {
+
     public sealed partial class ListOfTasksUserControl : UserControl
     {
+        private readonly MainWindow mainWindow;
         internal ListOfTasksUserControlViewModel ViewModel { get; set; }
+
+        #pragma warning disable CS8601, CS8618
         public ListOfTasksUserControl()
         {
             InitializeComponent();
             DataContext = ViewModel = new ListOfTasksUserControlViewModel();
+            mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            ViewModel.GetList();
         }
+        #pragma warning restore CS8601, CS8618
 
-        internal void Edit_BtnClick(object sender, RoutedEventArgs e)
+        private void Edit_BtnClick(object sender, RoutedEventArgs e)
         {
             try
             {
-                ErrorMsg.Visibility = Visibility.Hidden;
-                Task task = (Task)((Button)sender).Tag;
-                ViewModel.EditTask(task);
+                mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+                mainWindow.MainContext.Content = new EditTaskUserControl((Task)((Button)sender).Tag);
             }
             catch (Exception ex)
             {
-                ErrorMsg.Visibility = Visibility.Visible;
-                ErrorMsg.Text = ex.Message;
+                mainWindow.ErrorMsg.Visibility = Visibility.Visible;
+                mainWindow.ErrorMsg.Text = ex.Message;
             }
             
         }

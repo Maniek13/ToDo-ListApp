@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:model="clr-namespace:ToDoList.Views">
 
-    <StackPanel>
-        <TextBox  Text="{Binding TaskValue.Name}"></TextBox>
-        <Button  Click="ChangeTask_BtnClick" Background="AntiqueWhite">zmien</Button>
+    <StackPanel x:Name="EditForm">
+        <TextBox TextChanged="TextChangedEventHandler" Text="{Binding TaskValue.Name}" ></TextBox>
+        <Button  Click="EditTask_BtnClick" Background="AntiqueWhite">zmien</Button>
     </StackPanel>
 </UserControl>

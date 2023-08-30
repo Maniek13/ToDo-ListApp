@@ -16,6 +16,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <TextBlock DockPanel.Dock="Bottom"  x:Name="ErrorMsg" Foreground="red" Height="45" Panel.ZIndex="100" TextWrapping="Wrap" Visibility="Hidden" VerticalAlignment="Bottom" />
     </DockPanel>
 </UserControl>
