@@ -13,6 +13,6 @@ namespace ToDoList.DbModels
         [Required]
         public string Description { get; set; } = "";
         [Required]
-        public string Type { get; set; } = "";
+        public int Type { get; set; }
     }
 }

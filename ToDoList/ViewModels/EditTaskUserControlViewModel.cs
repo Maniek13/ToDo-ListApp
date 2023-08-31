@@ -11,7 +11,7 @@ namespace ToDoList.ViewModels
     {
         internal void EditTask(Task task)
         {
-            throw new NotImplementedException($"Not implement exception. {task.Name}");
+            throw new NotImplementedException($"Not implement exception. {task.Name} {task.Description} {task.Type}");
         }
 
     }

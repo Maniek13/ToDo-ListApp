@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 G:\Programowanie\c sharp\ToDoApp\ToDoList\App.xaml
 5-1641114523
 
-19-1777356536
+20-1962780027
 232-463804504
 MainWindow.xaml;Views\AddTaskUserControl.xaml;Views\EditTaskUserControl.xaml;Views\ListUserControl.xaml;Views\MenuUserControl.xaml;
 
-True
+False
 

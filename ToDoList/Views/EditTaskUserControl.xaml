@@ -1,10 +1,22 @@
 ﻿<UserControl x:Class="ToDoList.Views.EditTaskUserControl"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:model="clr-namespace:ToDoList.Views">
+        xmlns:local="clr-namespace:ToDoList.Helper"
+             >
 
-    <StackPanel x:Name="EditForm">
-        <TextBox TextChanged="TextChangedEventHandler" Text="{Binding TaskValue.Name}" ></TextBox>
-        <Button  Click="EditTask_BtnClick" Background="AntiqueWhite">zmien</Button>
+    <StackPanel x:Name="EditForm" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+        <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+            <Label Width="80" Height="25" Padding="0,4,0,0">Name:</Label>
+            <TextBox Height="25" TextChanged="TextChangedEventHandler" Text="{Binding TaskValue.Name}" Width="150" BorderThickness="0,0,0,1" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+            <Label Height="25" Width="80" Padding="0,4,0,0">Description:</Label>
+            <TextBox Height="25" TextChanged="TextChangedEventHandler" Text="{Binding TaskValue.Description}" Width="150" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" />
+        </StackPanel>
+        <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+            <Label Height="25" Width="80" Padding="0,4,0,0">Type:</Label>
+            <ComboBox  Height="25" ItemsSource="{Binding Source={x:Static local:Resources.TaskTypes}}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding TaskValue.Type}" Width="150" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Background="{x:Null}"/>
+        </StackPanel>
+        <Button  Click="EditTask_BtnClick" Background="AntiqueWhite">Change task</Button>
     </StackPanel>
 </UserControl>
