@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Configuration.Provider;
 using System.IO;
-using System.Windows;
-using System.Windows.Media;
-using System.Xml.Linq;
-using static System.Net.WebRequestMethods;
 
 namespace ToDoList.Settings
 {

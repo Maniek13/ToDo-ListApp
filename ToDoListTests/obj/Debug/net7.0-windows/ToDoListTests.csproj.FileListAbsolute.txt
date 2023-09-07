@@ -169,3 +169,5 @@ G:\Programowanie\c sharp\ToDoApp\ToDoListTests\obj\Debug\net7.0-windows\refint\T
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\obj\Debug\net7.0-windows\ToDoListTests.pdb
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\obj\Debug\net7.0-windows\ToDoListTests.genruntimeconfig.cache
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\obj\Debug\net7.0-windows\ref\ToDoListTests.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Debug\net7.0-windows\Microsoft.Expression.Encoder.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Debug\net7.0-windows\WebcamControl.dll
