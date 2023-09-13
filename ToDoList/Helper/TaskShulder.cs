@@ -24,7 +24,7 @@ namespace ToDoList.Helper
                     td.Triggers.Add(new TimeTrigger(date));
                     td.Actions.Add(new ExecAction($"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.exe", msg, AppDomain.CurrentDomain.BaseDirectory));
 
-                    ts.RootFolder.RegisterTaskDefinition(taskName, td);
+                    ts.RootFolder.RegisterTaskDefinition($"\\ToDoApp\\{date.ToString("dd-MM-yy")}\\{taskName}", td);
                 }
             }
             catch(Exception ex)
@@ -37,7 +37,9 @@ namespace ToDoList.Helper
         {
             try
             {
-                CreateOne(msg, date, $"{new Guid()}");
+                Random rnd = new Random();
+                
+                CreateOne(msg, date, $"{rnd.Next(int.MinValue, int.MaxValue)}");
             }
             catch (Exception ex)
             {
@@ -49,7 +51,7 @@ namespace ToDoList.Helper
         {
             try
             {
-                CreateOne(msg, date, $"TDL{ id.ToString()}");
+                CreateOne(msg, date, $"{ id.ToString()}");
             }
             catch(Exception ex) 
             {
