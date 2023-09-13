@@ -11,7 +11,7 @@ namespace ToDoList.ViewModels
         {
             try
             {
-                if (DateTime.Compare(DateTime.Now.AddDays(1), date) <= 0)
+                if (DateTime.Compare(DateTime.Now, date) < 0)
                 {
                     TaskShulder task = new TaskShulder();
                     task.CreateTaskShulder(msg, date);
