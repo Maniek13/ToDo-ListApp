@@ -35,7 +35,7 @@
 
   <ItemGroup>
     <Compile Update="AssemblyInfo.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
 

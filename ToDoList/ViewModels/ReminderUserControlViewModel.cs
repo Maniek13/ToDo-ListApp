@@ -11,8 +11,15 @@ namespace ToDoList.ViewModels
         {
             try
             {
-                TaskShulder task = new TaskShulder();
-                task.CreateTaskShulder(msg, date);
+                if (DateTime.Compare(DateTime.Now.AddDays(1), date) <= 0)
+                {
+                    TaskShulder task = new TaskShulder();
+                    task.CreateTaskShulder(msg, date);
+                }
+                else
+                    throw new Exception("Date must by leter then today");
+
+                
             }
             catch(Exception ex)
             {

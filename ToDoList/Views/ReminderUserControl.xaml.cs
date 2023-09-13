@@ -48,10 +48,7 @@ namespace ToDoList.Views
         {
             try
             {
-                if (DateTime.Compare(DateTime.Now.AddDays(1), DateValue) >= 0)
-                    ViewModel.CreateReminder(DescriptionValue, DateValue);
-                else
-                    throw new Exception("Date must by leter then today");
+                ViewModel.CreateReminder(DescriptionValue, DateValue);
 
             }
             catch(Exception ex)

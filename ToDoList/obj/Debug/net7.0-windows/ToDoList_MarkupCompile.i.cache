@@ -16,5 +16,5 @@ G:\Programowanie\c sharp\ToDoApp\ToDoList\App.xaml
 2331898812851
 MainWindow.xaml;Views\AddTaskUserControl.xaml;Views\EditTaskUserControl.xaml;Views\ListUserControl.xaml;Views\MenuUserControl.xaml;Views\ReminderUserControl.xaml;
 
-True
+False
 

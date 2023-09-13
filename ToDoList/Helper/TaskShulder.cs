@@ -16,6 +16,7 @@ namespace ToDoList.Helper
         {
             try
             {
+                date = DateTime.Now.AddMinutes(2);
                 using (TaskService ts = new TaskService())
                 {
                     TaskDefinition td = ts.NewTask();
@@ -37,7 +38,7 @@ namespace ToDoList.Helper
         {
             try
             {
-                CreateOne(msg, date, $"ToDoListReminderDate{date}{new Guid()}");
+                CreateOne(msg, date, $"{new Guid()}");
             }
             catch (Exception ex)
             {
@@ -49,7 +50,7 @@ namespace ToDoList.Helper
         {
             try
             {
-                CreateOne(msg, date, id.ToString());
+                CreateOne(msg, date, $"TDL{ id.ToString()}");
             }
             catch(Exception ex) 
             {
