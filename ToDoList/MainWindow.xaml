@@ -6,17 +6,18 @@
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
         
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="800">
     <DockPanel>
-        <Grid DockPanel.Dock="Top">
+        <Grid DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto">
             <Grid.RowDefinitions>
                 <RowDefinition Height="25" />
-                <RowDefinition Height="25"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <Frame Grid.Row="0" x:Name="Menu" Source="/Views/MenuUserControl.xaml"/>
             <Frame Grid.Row="1" x:Name="MainContext" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+            <TextBlock Grid.Row="2" DockPanel.Dock="Bottom"  x:Name="ErrorMsg" Foreground="red" Height="50" Panel.ZIndex="100" TextWrapping="Wrap" Visibility="Hidden" VerticalAlignment="Bottom" />
         </Grid>
-        <TextBlock DockPanel.Dock="Bottom"  x:Name="ErrorMsg" Foreground="red" Height="50" Panel.ZIndex="100" TextWrapping="Wrap" Visibility="Hidden" VerticalAlignment="Bottom" />
+        
     </DockPanel>
 </Window>

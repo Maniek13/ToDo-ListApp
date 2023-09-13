@@ -10,7 +10,7 @@ namespace ToDoList.Views
     public partial class EditTaskUserControl : UserControl
     {
         private readonly MainWindow mainWindow;
-        private EditTasksUserControlViewModel ViewModel { get; set; }
+        private EditTasksUserControlViewModel ViewModel { get; }
 
         #pragma warning disable CS8601, CS8618
         public EditTaskUserControl(Task task)
@@ -23,12 +23,14 @@ namespace ToDoList.Views
         }
         #pragma warning restore CS8601, CS8618
 
+        #region Dependency property
         private static readonly DependencyProperty TaskValueProperty =
         DependencyProperty.Register(
             name: "TaskValue",
             propertyType: typeof(Task),
             ownerType: typeof(EditTaskUserControl),
             typeMetadata: new FrameworkPropertyMetadata(defaultValue: new Task()));
+        #endregion
 
         private Task TaskValue
         {

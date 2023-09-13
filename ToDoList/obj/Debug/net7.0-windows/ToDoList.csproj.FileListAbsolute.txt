@@ -188,3 +188,15 @@ G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\EditTas
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\EditTaskUserControl.baml
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\AddTaskUserControl.g.cs
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\AddTaskUserControl.baml
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\ReminderUserControl.g.cs
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Debug\net7.0-windows\Views\ReminderUserControl.baml
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\Microsoft.Win32.TaskScheduler.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\de\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\es\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\fr\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\it\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\pl\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\ru\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\zh-Hant\Microsoft.Win32.TaskScheduler.resources.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Debug\net7.0-windows\AssemblyInfo.cs

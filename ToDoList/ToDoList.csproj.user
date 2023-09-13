@@ -13,6 +13,9 @@
     <Compile Update="Views\EditTaskUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ReminderUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ListUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ReminderUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
