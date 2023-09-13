@@ -16,7 +16,6 @@ namespace ToDoList.Helper
         {
             try
             {
-                date = DateTime.Now.AddMinutes(2);
                 using (TaskService ts = new TaskService())
                 {
                     TaskDefinition td = ts.NewTask();
