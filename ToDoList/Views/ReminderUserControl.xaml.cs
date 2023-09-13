@@ -58,7 +58,7 @@ namespace ToDoList.Views
                 Status.Visibility = Visibility.Visible;
                 Status.Text = $"Reminder was added on date: {DateValue}";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 mainWindow.ErrorMsg.Text = ex.Message;
                 mainWindow.ErrorMsg.Visibility = Visibility.Visible;

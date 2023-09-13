@@ -23,11 +23,11 @@ namespace ToDoList.DbControler
 
                 return reminder.Id;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            
+
         }
         public void DeleteExecutedReminder(int id)
         {

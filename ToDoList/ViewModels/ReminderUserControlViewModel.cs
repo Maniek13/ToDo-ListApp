@@ -1,7 +1,5 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using Microsoft.Win32.TaskScheduler;
 using System;
-using System.Windows.Navigation;
 using ToDoList.Helper;
 
 namespace ToDoList.ViewModels
@@ -12,7 +10,7 @@ namespace ToDoList.ViewModels
         {
             try
             {
-                if(msg.IsNullOrEmpty())
+                if (msg.IsNullOrEmpty())
                     throw new Exception("Please write text of reminder");
 
 
@@ -24,9 +22,9 @@ namespace ToDoList.ViewModels
                 else
                     throw new Exception("Date must by leter then today");
 
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }

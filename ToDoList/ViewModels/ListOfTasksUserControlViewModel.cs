@@ -6,7 +6,7 @@ namespace ToDoList.ViewModels
     public sealed class ListOfTasksUserControlViewModel
     {
 #pragma warning disable CS8601, CS8618
-        private ObservableCollection<Task> _tasks {  get; set; }
+        private ObservableCollection<Task> _tasks { get; set; }
 #pragma warning restore S8601, CS8618
         public ObservableCollection<Task> Tasks { get { return _tasks; } }
 

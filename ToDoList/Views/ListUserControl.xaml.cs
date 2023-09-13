@@ -11,9 +11,9 @@ namespace ToDoList.Views
     public sealed partial class ListOfTasksUserControl : UserControl
     {
         private readonly MainWindow mainWindow;
-        internal ListOfTasksUserControlViewModel ViewModel { get;}
+        internal ListOfTasksUserControlViewModel ViewModel { get; }
 
-        #pragma warning disable CS8601, CS8618
+#pragma warning disable CS8601, CS8618
         public ListOfTasksUserControl()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace ToDoList.Views
             mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
             ViewModel.GetList();
         }
-        #pragma warning restore CS8601, CS8618
+#pragma warning restore CS8601, CS8618
 
         private void Edit_BtnClick(object sender, RoutedEventArgs e)
         {
@@ -35,7 +35,7 @@ namespace ToDoList.Views
                 mainWindow.ErrorMsg.Visibility = Visibility.Visible;
                 mainWindow.ErrorMsg.Text = ex.Message;
             }
-            
+
         }
     }
 }

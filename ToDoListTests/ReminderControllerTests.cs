@@ -1,5 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-
 namespace ToDoListTests
 {
     public class ReminderControllerTests

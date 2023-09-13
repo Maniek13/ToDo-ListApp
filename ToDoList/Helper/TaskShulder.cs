@@ -26,7 +26,7 @@ namespace ToDoList.Helper
             }
             catch (Exception ex)
             {
-                if (id>0)
+                if (id > 0)
                     reminderDbController.DeleteExecutedReminder(id);
                 throw new Exception(ex.Message);
             }
@@ -52,7 +52,7 @@ namespace ToDoList.Helper
             {
                 List<Reminder> reminders = reminderDbController.GetExpiredReminder(actualDate);
 
-                for(int i =0; i< reminders.Count; ++i)
+                for (int i = 0; i < reminders.Count; ++i)
                 {
                     reminderDbController.DeleteExecutedReminder(reminders[i].Id);
                     using TaskService ts = new();

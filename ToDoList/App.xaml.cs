@@ -29,24 +29,24 @@ namespace ToDoList
                     {
                         string msg = reminderDbController.GetReminderMsg(id);
 
-                        if(!msg.IsNullOrEmpty())
+                        if (!msg.IsNullOrEmpty())
                         {
                             MessageBox.Show(msg);
 
                             taskScheduler.DeleteTaskShulder(id, date);
                         }
-                      
+
                     }
                     else
                     {
-                        MessageBox.Show("Bad data format");                
-                    } 
+                        MessageBox.Show("Bad data format");
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-               
+
                 Environment.Exit(0);
             }
             else
@@ -55,7 +55,7 @@ namespace ToDoList
                 {
                     List<Reminder> reminders = taskScheduler.DeleteExpiredShulder(DateTime.Now);
 
-                    if(reminders.Count > 0)
+                    if (reminders.Count > 0)
                     {
                         StringBuilder sb = new StringBuilder();
 
@@ -71,7 +71,7 @@ namespace ToDoList
                     wnd.ErrorMsg.Visibility = Visibility.Visible;
                     wnd.ErrorMsg.Text = ex.Message;
                 }
-                
+
 
                 wnd.Show();
             }

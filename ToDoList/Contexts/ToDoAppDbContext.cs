@@ -10,7 +10,7 @@ namespace ToDoList.Contexts
         public DbSet<Reminder> Reminder { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           optionsBuilder.UseSqlServer(DbSettings.ConnectionString);
+            optionsBuilder.UseSqlServer(DbSettings.ConnectionString);
         }
     }
 }

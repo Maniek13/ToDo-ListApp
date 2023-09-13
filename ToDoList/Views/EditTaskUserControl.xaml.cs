@@ -12,7 +12,7 @@ namespace ToDoList.Views
         private readonly MainWindow mainWindow;
         private EditTasksUserControlViewModel ViewModel { get; }
 
-        #pragma warning disable CS8601, CS8618
+#pragma warning disable CS8601, CS8618
         public EditTaskUserControl(Task task)
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace ToDoList.Views
             EditForm.DataContext = this;
             mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
         }
-        #pragma warning restore CS8601, CS8618
+#pragma warning restore CS8601, CS8618
 
         #region Dependency property
         private static readonly DependencyProperty TaskValueProperty =
@@ -34,7 +34,7 @@ namespace ToDoList.Views
 
         private Task TaskValue
         {
-            get {  return (Task)GetValue(TaskValueProperty); }
+            get { return (Task)GetValue(TaskValueProperty); }
             set { SetValue(TaskValueProperty, value); }
         }
         private void TextChangedEventHandler(object sender, TextChangedEventArgs args)
@@ -49,7 +49,7 @@ namespace ToDoList.Views
                 mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
                 ViewModel.EditTask(TaskValue);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 mainWindow.ErrorMsg.Text = ex.Message;
                 mainWindow.ErrorMsg.Visibility = Visibility.Visible;
