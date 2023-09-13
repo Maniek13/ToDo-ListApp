@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32.TaskScheduler;
+﻿using Microsoft.IdentityModel.Tokens;
+using Microsoft.Win32.TaskScheduler;
 using System;
 using System.Windows.Navigation;
 using ToDoList.Helper;
@@ -7,13 +8,17 @@ namespace ToDoList.ViewModels
 {
     internal class ReminderUserControlViewModel
     {
-        internal void CreateReminder(string msg, DateTime date)
+        internal static void CreateReminder(string msg, DateTime date)
         {
             try
             {
+                if(msg.IsNullOrEmpty())
+                    throw new Exception("Please write text of reminder");
+
+
                 if (DateTime.Compare(DateTime.Now, date) < 0)
                 {
-                    TaskShulder task = new TaskShulder();
+                    TaskShulder task = new();
                     task.CreateTaskShulder(msg, date);
                 }
                 else

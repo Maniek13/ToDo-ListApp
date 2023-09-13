@@ -17,7 +17,7 @@ namespace ToDoList.Views
                 name: "DateValue",
                 propertyType: typeof(DateTime),
                 ownerType: typeof(ReminderUserControl),
-                typeMetadata: new FrameworkPropertyMetadata(defaultValue: DateTime.Now.AddDays(1)));
+                typeMetadata: new FrameworkPropertyMetadata(defaultValue: DateTime.Now));
 
         private static readonly DependencyProperty DescriptionValueProperty =
             DependencyProperty.Register(
@@ -48,14 +48,23 @@ namespace ToDoList.Views
         {
             try
             {
-                ViewModel.CreateReminder(DescriptionValue, DateValue);
-
+                mainWindow.ErrorMsg.Text = "";
+                mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+                Status.Visibility = Visibility.Hidden;
+                AddBtn.IsEnabled = false;
+                mainWindow.ErrorMsg.Text = "";
+                mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+                ReminderUserControlViewModel.CreateReminder(DescriptionValue, DateValue);
+                Status.Visibility = Visibility.Visible;
+                Status.Text = $"Reminder was added on date: {DateValue}";
             }
             catch(Exception ex)
             {
                 mainWindow.ErrorMsg.Text = ex.Message;
                 mainWindow.ErrorMsg.Visibility = Visibility.Visible;
             }
+
+            AddBtn.IsEnabled = true;
         }
     }
 }
