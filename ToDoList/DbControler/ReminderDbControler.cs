@@ -9,7 +9,7 @@ namespace ToDoList.DbControler
     internal class ReminderDbControler
     {
         readonly ToDoAppDbContext dbContext = new();
-        public int AddReminder(DateTime date, string msg)
+        public int AddReminder(DateTime date, string msg, int? taskId = null)
         {
             try
             {
@@ -17,6 +17,7 @@ namespace ToDoList.DbControler
                 {
                     Description = msg,
                     Date = date,
+                    TaskID = taskId
                 };
                 dbContext.Reminder.Add(reminder);
                 dbContext.SaveChanges();

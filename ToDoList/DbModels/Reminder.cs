@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ToDoList.DbModels
 {
@@ -11,5 +12,7 @@ namespace ToDoList.DbModels
         public DateTime Date { get; set; }
         [Required]
         public string Description { get; set; } = "";
+        [AllowNull]
+        public int? TaskID { get; set; }
     }
 }

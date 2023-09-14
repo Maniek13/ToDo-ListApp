@@ -4,7 +4,7 @@ using ToDoList.Helper;
 
 namespace ToDoList.ViewModels
 {
-    internal class ReminderUserControlViewModel
+    internal class CreateReminderUserControlViewModel
     {
         internal static void CreateReminder(string msg, DateTime date)
         {

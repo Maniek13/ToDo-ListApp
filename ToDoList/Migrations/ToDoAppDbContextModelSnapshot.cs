@@ -37,6 +37,9 @@ namespace ToDoList.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("TaskID")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Reminder");

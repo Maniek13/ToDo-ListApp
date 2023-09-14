@@ -29,7 +29,7 @@ namespace ToDoList.Views
         private void ReminderCreate_BtnClick(object sender, RoutedEventArgs e)
         {
             mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
-            mainWindow.MainContext.Content = new ReminderUserControl();
+            mainWindow.MainContext.Content = new CreateReminderUserControl();
         }
     }
 }

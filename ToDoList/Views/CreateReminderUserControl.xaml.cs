@@ -6,9 +6,9 @@ using ToDoList.ViewModels;
 
 namespace ToDoList.Views
 {
-    public partial class ReminderUserControl : UserControl
+    public partial class CreateReminderUserControl : UserControl
     {
-        private ReminderUserControlViewModel ViewModel { get; }
+        private CreateReminderUserControlViewModel ViewModel { get; }
         private readonly MainWindow mainWindow;
 
         #region Dependency property
@@ -16,14 +16,14 @@ namespace ToDoList.Views
             DependencyProperty.Register(
                 name: "DateValue",
                 propertyType: typeof(DateTime),
-                ownerType: typeof(ReminderUserControl),
+                ownerType: typeof(CreateReminderUserControl),
                 typeMetadata: new FrameworkPropertyMetadata(defaultValue: DateTime.Now));
 
         private static readonly DependencyProperty DescriptionValueProperty =
             DependencyProperty.Register(
                 name: "DescriptionValue",
                 propertyType: typeof(string),
-                ownerType: typeof(ReminderUserControl),
+                ownerType: typeof(CreateReminderUserControl),
                 typeMetadata: new FrameworkPropertyMetadata(defaultValue: ""));
         #endregion
 
@@ -37,10 +37,10 @@ namespace ToDoList.Views
             get { return (string)GetValue(DescriptionValueProperty); }
             set { SetValue(DescriptionValueProperty, value); }
         }
-        public ReminderUserControl()
+        public CreateReminderUserControl()
         {
             InitializeComponent();
-            ViewModel = new ReminderUserControlViewModel();
+            ViewModel = new CreateReminderUserControlViewModel();
             DataContext = this;
             mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
         }
@@ -54,7 +54,7 @@ namespace ToDoList.Views
                 AddBtn.IsEnabled = false;
                 mainWindow.ErrorMsg.Text = "";
                 mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
-                ReminderUserControlViewModel.CreateReminder(DescriptionValue, DateValue);
+                CreateReminderUserControlViewModel.CreateReminder(DescriptionValue, DateValue);
                 Status.Visibility = Visibility.Visible;
                 Status.Text = $"Reminder was added on date: {DateValue}";
             }

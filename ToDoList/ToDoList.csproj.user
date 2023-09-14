@@ -15,7 +15,7 @@
     <Compile Update="Views\EditTaskUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\ReminderUserControl.xaml.cs">
+    <Compile Update="Views\CreateReminderUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <Page Update="Views\ListUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\ReminderUserControl.xaml">
+    <Page Update="Views\CreateReminderUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

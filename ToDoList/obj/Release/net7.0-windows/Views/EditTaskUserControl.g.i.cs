@@ -61,7 +61,7 @@ namespace ToDoList.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ToDoList;V1.0.0.0;component/views/edittaskusercontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ToDoList;component/views/edittaskusercontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\EditTaskUserControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

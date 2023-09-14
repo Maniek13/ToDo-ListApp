@@ -1,5 +1,4 @@
 G:\Programowanie\c sharp\ToDoApp\App\ToDoList.exe
-G:\Programowanie\c sharp\ToDoApp\App\AssemblyInfo.cs
 G:\Programowanie\c sharp\ToDoApp\App\ToDoList.dll
 G:\Programowanie\c sharp\ToDoApp\App\ToDoList.runtimeconfig.json
 G:\Programowanie\c sharp\ToDoApp\App\ToDoList.pdb

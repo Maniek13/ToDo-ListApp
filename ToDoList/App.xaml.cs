@@ -57,7 +57,7 @@ namespace ToDoList
 
                     if (reminders.Count > 0)
                     {
-                        StringBuilder sb = new StringBuilder();
+                        StringBuilder sb = new();
 
                         for (int i = 0; i < reminders.Count; ++i)
                         {

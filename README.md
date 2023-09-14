@@ -1,7 +1,7 @@
 Application preview in App folder
 
 v0.3
-The application allows you to edit available orders and create notification about task. If any notification have been missed, they will appear you at application startup.
+The application allows to you to create reminder which be show like a Windows dialog.  If any notification have been missed, they will appear you at application startup.
 
 
 Main window

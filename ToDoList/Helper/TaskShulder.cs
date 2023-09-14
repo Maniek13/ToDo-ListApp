@@ -9,13 +9,17 @@ namespace ToDoList.Helper
     internal class TaskShulder
     {
         readonly ReminderDbControler reminderDbController = new();
-        internal void CreateTaskShulder(string msg, DateTime date)
+        internal void CreateTaskShulder(string msg, DateTime date, int? taskId = null)
         {
             int id = 0;
             try
             {
                 using TaskService ts = new();
-                id = reminderDbController.AddReminder(date, msg);
+
+                if(taskId != null)
+                    id = reminderDbController.AddReminder(date, msg, taskId);
+                else
+                    id = reminderDbController.AddReminder(date, msg);
 
                 TaskDefinition td = ts.NewTask();
                 td.RegistrationInfo.Description = $"ToDoList reminder";

@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 G:\Programowanie\c sharp\ToDoApp\ToDoList\App.xaml
-6201198390
+6-1747842347
 
-26-975849205
+28-219296498
 238994850760
-MainWindow.xaml;Views\AddTaskUserControl.xaml;Views\EditTaskUserControl.xaml;Views\ListUserControl.xaml;Views\MenuUserControl.xaml;Views\ReminderUserControl.xaml;
+MainWindow.xaml;Views\AddTaskUserControl.xaml;Views\CreateReminderUserControl.xaml;Views\EditTaskUserControl.xaml;Views\ListUserControl.xaml;Views\MenuUserControl.xaml;
 
 False
 

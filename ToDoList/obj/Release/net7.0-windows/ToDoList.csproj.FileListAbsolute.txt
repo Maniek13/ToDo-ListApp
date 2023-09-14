@@ -1,4 +1,3 @@
-G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Release\net7.0-windows\AssemblyInfo.cs
 G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Release\net7.0-windows\ToDoList.exe
 G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Release\net7.0-windows\ToDoList.deps.json
 G:\Programowanie\c sharp\ToDoApp\ToDoList\bin\Release\net7.0-windows\ToDoList.runtimeconfig.json
@@ -104,7 +103,6 @@ G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\AddTa
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\EditTaskUserControl.g.cs
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\ListUserControl.g.cs
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\MenuUserControl.g.cs
-G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\ReminderUserControl.g.cs
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\App.g.cs
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ToDoList_MarkupCompile.cache
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ToDoList_MarkupCompile.lref
@@ -113,7 +111,6 @@ G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\AddTa
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\EditTaskUserControl.baml
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\ListUserControl.baml
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\MenuUserControl.baml
-G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\ReminderUserControl.baml
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ToDoList.g.resources
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ToDoList.GeneratedMSBuildEditorConfig.editorconfig
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ToDoList.AssemblyInfoInputs.cache
@@ -125,3 +122,5 @@ G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\refint\ToDo
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ToDoList.pdb
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ToDoList.genruntimeconfig.cache
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ref\ToDoList.dll
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\CreateReminderUserControl.g.cs
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\CreateReminderUserControl.baml
