@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using ToDoList.Models;
 using ToDoList.ViewModels;
 
 namespace ToDoList.Views
@@ -12,31 +13,21 @@ namespace ToDoList.Views
         private readonly MainWindow mainWindow;
 
         #region Dependency property
-        private static readonly DependencyProperty DateValueProperty =
+        private static readonly DependencyProperty ReminderProperty =
             DependencyProperty.Register(
-                name: "DateValue",
-                propertyType: typeof(DateTime),
+                name: "ReminderValue",
+                propertyType: typeof(Reminder),
                 ownerType: typeof(CreateReminderUserControl),
-                typeMetadata: new FrameworkPropertyMetadata(defaultValue: DateTime.Now));
-
-        private static readonly DependencyProperty DescriptionValueProperty =
-            DependencyProperty.Register(
-                name: "DescriptionValue",
-                propertyType: typeof(string),
-                ownerType: typeof(CreateReminderUserControl),
-                typeMetadata: new FrameworkPropertyMetadata(defaultValue: ""));
+                typeMetadata: new FrameworkPropertyMetadata(defaultValue: new Reminder() { Date = DateTime.Now }));
         #endregion
 
-        private DateTime DateValue
+        private Reminder ReminderValue
         {
-            get { return (DateTime)GetValue(DateValueProperty); }
-            set { SetValue(DateValueProperty, value); }
+            get { return (Reminder)GetValue(ReminderProperty); }
+            set { SetValue(ReminderProperty, value); }
         }
-        private string DescriptionValue
-        {
-            get { return (string)GetValue(DescriptionValueProperty); }
-            set { SetValue(DescriptionValueProperty, value); }
-        }
+
+#pragma warning disable CS8601, CS8618
         public CreateReminderUserControl()
         {
             InitializeComponent();
@@ -44,6 +35,8 @@ namespace ToDoList.Views
             DataContext = this;
             mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
         }
+#pragma warning restore CS8601, CS8618
+
         private void CreateNewReminderBtn_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -54,9 +47,9 @@ namespace ToDoList.Views
                 AddBtn.IsEnabled = false;
                 mainWindow.ErrorMsg.Text = "";
                 mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
-                CreateReminderUserControlViewModel.CreateReminder(DescriptionValue, DateValue);
+                ViewModel.CreateReminder(ReminderValue);
                 Status.Visibility = Visibility.Visible;
-                Status.Text = $"Reminder was added on date: {DateValue}";
+                Status.Text = $"Reminder was added on date: {ReminderValue.Date}";
             }
             catch (Exception ex)
             {

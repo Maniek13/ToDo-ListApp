@@ -1,23 +1,25 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System;
 using ToDoList.Helper;
+using ToDoList.Models;
 
 namespace ToDoList.ViewModels
 {
+#pragma warning disable CA1822
     internal class CreateReminderUserControlViewModel
     {
-        internal static void CreateReminder(string msg, DateTime date)
+        internal void CreateReminder(Reminder reminder)
         {
             try
             {
-                if (msg.IsNullOrEmpty())
+                if (reminder.Description.IsNullOrEmpty())
                     throw new Exception("Please write text of reminder");
 
 
-                if (DateTime.Compare(DateTime.Now, date) < 0)
+                if (DateTime.Compare(DateTime.Now, reminder.Date) < 0)
                 {
                     TaskShulder task = new();
-                    task.CreateTaskShulder(msg, date);
+                    task.CreateTaskShulder(ConversionHelper.ConvertToDbReminder(reminder));
                 }
                 else
                     throw new Exception("Date must by leter then today");
@@ -30,4 +32,5 @@ namespace ToDoList.ViewModels
             }
         }
     }
+#pragma warning restore CA1822
 }

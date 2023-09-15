@@ -10,14 +10,14 @@ namespace ToDoList.Views
     public partial class EditTaskUserControl : UserControl
     {
         private readonly MainWindow mainWindow;
-        private EditTasksUserControlViewModel ViewModel { get; }
+        private EditTaskUserControlViewModel ViewModel { get; }
 
 #pragma warning disable CS8601, CS8618
         public EditTaskUserControl(Task task)
         {
             InitializeComponent();
             TaskValue = task;
-            DataContext = ViewModel = new EditTasksUserControlViewModel();
+            DataContext = ViewModel = new EditTaskUserControlViewModel();
             EditForm.DataContext = this;
             mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
         }

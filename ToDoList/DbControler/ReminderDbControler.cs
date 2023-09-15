@@ -9,16 +9,10 @@ namespace ToDoList.DbControler
     internal class ReminderDbControler
     {
         readonly ToDoAppDbContext dbContext = new();
-        public int AddReminder(DateTime date, string msg, int? taskId = null)
+        public int AddReminder(Reminder reminder)
         {
             try
             {
-                Reminder reminder = new()
-                {
-                    Description = msg,
-                    Date = date,
-                    TaskID = taskId
-                };
                 dbContext.Reminder.Add(reminder);
                 dbContext.SaveChanges();
 
@@ -34,7 +28,9 @@ namespace ToDoList.DbControler
         {
             try
             {
-                Reminder reminder = dbContext.Reminder.Where(r => r.Id == id).FirstOrDefault();
+                Reminder? reminder = dbContext.Reminder.Where(r => r.Id == id).FirstOrDefault() ??
+                    throw new Exception("Reminder could not be found");
+
                 dbContext.Reminder.Remove(reminder);
                 dbContext.SaveChanges();
             }
@@ -48,7 +44,9 @@ namespace ToDoList.DbControler
         {
             try
             {
-                Reminder reminder = dbContext.Reminder.Where(r => r.Id == id).FirstOrDefault();
+                Reminder? reminder = dbContext.Reminder.Where(r => r.Id == id).FirstOrDefault() ??
+                    throw new Exception("Reminder could not be found");
+
                 return reminder.Description;
             }
             catch (Exception ex)

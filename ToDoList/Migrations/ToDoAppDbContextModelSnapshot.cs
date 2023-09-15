@@ -61,6 +61,9 @@ namespace ToDoList.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Reminder")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Type")
                         .HasColumnType("int");
 

@@ -2,7 +2,6 @@ G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Release\net7.0-windows\Coverl
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Release\net7.0-windows\testhost.dll
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Release\net7.0-windows\ToDoList.deps.json
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Release\net7.0-windows\ToDoList.runtimeconfig.json
-G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Release\net7.0-windows\AssemblyInfo.cs
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Release\net7.0-windows\ToDoList.exe
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Release\net7.0-windows\testhost.exe
 G:\Programowanie\c sharp\ToDoApp\ToDoListTests\bin\Release\net7.0-windows\NUnit3.TestAdapter.dll

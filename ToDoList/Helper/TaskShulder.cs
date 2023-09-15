@@ -9,24 +9,21 @@ namespace ToDoList.Helper
     internal class TaskShulder
     {
         readonly ReminderDbControler reminderDbController = new();
-        internal void CreateTaskShulder(string msg, DateTime date, int? taskId = null)
+        internal void CreateTaskShulder(Reminder reminder)
         {
             int id = 0;
             try
             {
                 using TaskService ts = new();
 
-                if(taskId != null)
-                    id = reminderDbController.AddReminder(date, msg, taskId);
-                else
-                    id = reminderDbController.AddReminder(date, msg);
+                id = reminderDbController.AddReminder(reminder);
 
                 TaskDefinition td = ts.NewTask();
                 td.RegistrationInfo.Description = $"ToDoList reminder";
                 td.Settings.AllowDemandStart = true;
-                td.Triggers.Add(new TimeTrigger(date));
-                td.Actions.Add(new ExecAction($"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.exe", $"{id.ToString()} {date:dd-MM-yy}", AppDomain.CurrentDomain.BaseDirectory));
-                ts.RootFolder.RegisterTaskDefinition($"\\ToDoApp\\{date:dd-MM-yy}\\{id}", td);
+                td.Triggers.Add(new TimeTrigger(reminder.Date));
+                td.Actions.Add(new ExecAction($"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.exe", $"{id} {reminder.Date:dd-MM-yy}", AppDomain.CurrentDomain.BaseDirectory));
+                ts.RootFolder.RegisterTaskDefinition($"\\ToDoApp\\{reminder.Date:dd-MM-yy}\\{id}", td);
             }
             catch (Exception ex)
             {
@@ -42,7 +39,7 @@ namespace ToDoList.Helper
             {
                 reminderDbController.DeleteExecutedReminder(id);
                 using TaskService ts = new();
-                ts.RootFolder.DeleteTask($"\\ToDoApp\\{date:dd-MM-yy}\\{id.ToString()}");
+                ts.RootFolder.DeleteTask($"\\ToDoApp\\{date:dd-MM-yy}\\{id}");
             }
             catch (Exception ex)
             {

@@ -3,7 +3,7 @@ using ToDoList.Models;
 
 namespace ToDoList.ViewModels
 {
-    public sealed class EditTasksUserControlViewModel
+    public sealed class EditTaskUserControlViewModel
     {
         internal void EditTask(Task task)
         {
