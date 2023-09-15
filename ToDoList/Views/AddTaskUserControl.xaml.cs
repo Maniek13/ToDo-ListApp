@@ -58,7 +58,7 @@ namespace ToDoList.Views
 
                 ViewModel.AddTask(TaskValue, ReminderValue);
 
-                mainWindow.MainContext = null;
+                mainWindow.MainContext.Content = new ListOfTasksUserControl();
             }
             catch (Exception ex)
             {

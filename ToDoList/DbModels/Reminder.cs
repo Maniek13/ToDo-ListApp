@@ -1,10 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
+using ToDoList.Interfaces;
 
 namespace ToDoList.DbModels
 {
-    internal record Reminder
+    internal record Reminder : IReminder
     {
         [Key]
         public int Id { get; set; }

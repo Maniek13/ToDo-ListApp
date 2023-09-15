@@ -1,7 +1,12 @@
 Application preview in App folder
 
-v0.3
-The application allows to you to create reminder which be show like a Windows dialog.  If any notification have been missed, they will appear you at application startup.
+v0.5
+The application allows you to: 
+- add task
+- show list of it
+- create reminder which be show like a Windows dialog
+
+If any notification have been missed, they will appear you at application startup.
 
 
 Main window
