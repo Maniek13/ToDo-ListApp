@@ -2,7 +2,7 @@
 
 namespace ToDoList.Models
 {
-    internal struct Reminder
+    public struct Reminder
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }

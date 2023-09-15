@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="ReminderMsgWindow" 
+        Title="Reminder" 
         SizeToContent="Height"
         Width="200"
         Closing="Window_Closing">

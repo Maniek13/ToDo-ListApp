@@ -6,9 +6,10 @@ using System.Text;
 using System.Windows;
 using System.Windows.Interop;
 using ToDoList.DbControler;
-using ToDoList.DbModels;
+using ToDoList.Models;
 using ToDoList.Helper;
 using ToDoList.Views;
+using System.Linq;
 
 namespace ToDoList
 {
@@ -22,7 +23,6 @@ namespace ToDoList
             MainWindow wnd = new();
             ReminderDbControler reminderDbController = new();
             TaskShulder taskScheduler = new();
-
 
             if (e.Args.Length == 2)
             {
@@ -55,17 +55,24 @@ namespace ToDoList
             {
                 try
                 {
-                    List<Reminder> reminders = taskScheduler.DeleteExpiredShulder(DateTime.Now);
-
-                    if (reminders.Count > 0)
+                    List<Reminder> reminders = taskScheduler.DeleteExpiredShulder(DateTime.Now).Select(el => ConversionHelper.ConvertToReminder(el)).ToList();
+                    if(reminders.Count > 0)
                     {
-                        StringBuilder sb = new();
+                        StringBuilder sb = new StringBuilder();
+
+                        sb.AppendLine("Expired reminders:");
+                        sb.AppendLine(@"\line");
 
                         for (int i = 0; i < reminders.Count; ++i)
                         {
-                            sb.AppendLine($"Reminders: {reminders[i].Description} on data: {reminders[i].Date} expired");
+                            sb.AppendLine(@"\line");
+                            sb.AppendLine($"Data: {reminders[i].Date}");
+                            sb.AppendLine(@"\line");
+                            sb.AppendLine($"{reminders[i].Description}");
                         }
-                        MessageBox.Show(sb.ToString());
+
+                        ReminderMsgWindow reminderMsgWindow = new(sb.ToString(), true);
+                        reminderMsgWindow.Show();
                     }
                 }
                 catch (Exception ex)

@@ -37,3 +37,8 @@ Reminder notyfication
 
 <img width="146" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/1081666d-618e-4231-afd9-fda50eae509d">
 
+Expired notifications
+
+<img width="613" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/ec3f42e6-9fdf-45ef-8bf1-9a7071ccac1e">
+
+

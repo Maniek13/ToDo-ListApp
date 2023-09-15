@@ -19,6 +19,17 @@ namespace ToDoList.Helper
             };
         }
 
+        internal static Reminder ConvertToReminder(DbReminder reminder)
+        {
+            return new Reminder()
+            {
+                Id = reminder.Id,
+                Description = reminder.Description,
+                Date = reminder.Date,
+                TaskID = reminder.TaskID
+            };
+        }
+
         internal static DbTask ConvertToDbTask(Task task)
         {
             return new DbTask()

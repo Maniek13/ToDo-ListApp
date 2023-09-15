@@ -8,20 +8,29 @@ namespace ToDoList.Views
     /// </summary>
     public partial class ReminderMsgWindow : Window
     {
-        public ReminderMsgWindow(string msg)
+        private readonly bool _expired;
+        public ReminderMsgWindow(string msg, bool expired = false)
         {
+            _expired = expired;
             InitializeComponent();
+
             MessageBox.Text = msg;
         }
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            if (!_expired)
+                Environment.Exit(0);
+            else
+                this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            e.Cancel = true;
-            Environment.Exit(0);
+            if (!_expired)
+            {
+                e.Cancel = true;
+                Environment.Exit(0);
+            }
         }
     }
 }
