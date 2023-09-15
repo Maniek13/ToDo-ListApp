@@ -9,6 +9,9 @@ The application allows you to:
 
 If any notification have been missed, they will appear you at application startup.
 
+v0.51
+Added own window to show messages
+Added format bar and multiline text field (Format bar will appear when the mouse is released after the selection)
 
 Main window
 

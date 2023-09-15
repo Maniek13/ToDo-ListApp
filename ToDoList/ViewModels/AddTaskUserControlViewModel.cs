@@ -12,6 +12,7 @@ namespace ToDoList.ViewModels
         {
             try
             {
+                CheckingValues.CheckTaskValues(task);
                 if(task.HasReminder)
                 {
                     TaskShulder taskShulder = new();

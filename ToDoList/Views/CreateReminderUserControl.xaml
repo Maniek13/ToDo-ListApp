@@ -1,9 +1,8 @@
 ﻿<UserControl x:Class="ToDoList.Views.CreateReminderUserControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ToDoList.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d">
     <StackPanel x:Name="NewReminderForm">
@@ -14,13 +13,16 @@
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <xctk:DateTimePicker Width="300" HorizontalContentAlignment="Left" Grid.Row="0" Padding="0,0,30,0" Margin="0,20,0,20" Value="{Binding ReminderValue.Date}"  />
-            <TextBox Grid.Row="1" x:Name="DescriptionTextBox" Text="{Binding ReminderValue.Description}">
-                <TextBox.Resources>
+            <xctk:RichTextBox Grid.Row="1" x:Name="DescriptionTextBox" Text="{Binding ReminderValue.Description}"  >
+                <xctk:RichTextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
-                </TextBox.Resources>
-            </TextBox>
+                </xctk:RichTextBox.Resources>
+                <xctk:RichTextBoxFormatBarManager.FormatBar>
+                    <xctk:RichTextBoxFormatBar />
+                </xctk:RichTextBoxFormatBarManager.FormatBar>
+            </xctk:RichTextBox>
             <Button x:Name="AddBtn"  Width="100" Margin="0,20,0,0" Grid.Row="2" Background="White" UseLayoutRounding="False" Click="CreateNewReminderBtn_Click">
                 <Button.Resources>
                     <Style TargetType="Border">

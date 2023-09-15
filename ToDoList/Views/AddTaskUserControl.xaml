@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ToDoList.Views"
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              xmlns:helper="clr-namespace:ToDoList.Helper"
              mc:Ignorable="d" >
@@ -16,7 +15,11 @@
             </StackPanel>
             <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                 <Label Height="25" Width="80" Padding="0,4,0,0">Description:</Label>
-                <TextBox Height="25" Text="{Binding TaskValue.Description}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black" />
+                <xctk:RichTextBox MinHeight="25" Text="{Binding TaskValue.Description}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black">
+                    <xctk:RichTextBoxFormatBarManager.FormatBar>
+                        <xctk:RichTextBoxFormatBar />
+                    </xctk:RichTextBoxFormatBarManager.FormatBar>
+                </xctk:RichTextBox>
             </StackPanel>
             <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                 <Label Height="25" Width="80" Padding="0,4,0,0">Type:</Label>

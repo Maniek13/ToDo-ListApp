@@ -18,6 +18,9 @@
     <Compile Update="Views\CreateReminderUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ReminderMsgWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -36,6 +39,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\CreateReminderUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ReminderMsgWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

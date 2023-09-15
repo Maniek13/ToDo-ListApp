@@ -124,3 +124,5 @@ G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ToDoList.ge
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\ref\ToDoList.dll
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\CreateReminderUserControl.g.cs
 G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\CreateReminderUserControl.baml
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\ReminderMsgWindow.baml
+G:\Programowanie\c sharp\ToDoApp\ToDoList\obj\Release\net7.0-windows\Views\ReminderMsgWindow.g.cs

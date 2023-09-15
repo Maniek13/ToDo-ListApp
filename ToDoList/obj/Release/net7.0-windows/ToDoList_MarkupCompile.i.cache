@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 G:\Programowanie\c sharp\ToDoApp\ToDoList\App.xaml
-6-1747842347
+7-507600153
 
-38-1731451827
+40-1311523588
 238994850760
-MainWindow.xaml;Views\AddTaskUserControl.xaml;Views\CreateReminderUserControl.xaml;Views\EditTaskUserControl.xaml;Views\ListUserControl.xaml;Views\MenuUserControl.xaml;
+MainWindow.xaml;Views\AddTaskUserControl.xaml;Views\CreateReminderUserControl.xaml;Views\EditTaskUserControl.xaml;Views\ListUserControl.xaml;Views\MenuUserControl.xaml;Views\ReminderMsgWindow.xaml;
 
 False
 

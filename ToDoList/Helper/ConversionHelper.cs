@@ -1,10 +1,8 @@
-﻿using DbReminder = ToDoList.DbModels.Reminder;
-using Reminder = ToDoList.Models.Reminder;
+﻿using System.IO;
+using DbReminder = ToDoList.DbModels.Reminder;
 using DbTask = ToDoList.DbModels.Task;
+using Reminder = ToDoList.Models.Reminder;
 using Task = ToDoList.Models.Task;
-using System.Collections.ObjectModel;
-using System.Windows.Documents;
-using System.Collections.Generic;
 
 namespace ToDoList.Helper
 {

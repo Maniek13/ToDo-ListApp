@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Interop;
+using ToDoList.Helper;
 using ToDoList.Models;
 using ToDoList.ViewModels;
 
@@ -37,10 +39,6 @@ namespace ToDoList.Views
             get { return (Task)GetValue(TaskValueProperty); }
             set { SetValue(TaskValueProperty, value); }
         }
-        private void TextChangedEventHandler(object sender, TextChangedEventArgs args)
-        {
-            mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
-        }
 
         private void EditTask_BtnClick(object sender, RoutedEventArgs e)
         {
@@ -48,6 +46,7 @@ namespace ToDoList.Views
             {
                 mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
                 ViewModel.EditTask(TaskValue);
+                mainWindow.MainContext.Content = new ListOfTasksUserControl();
             }
             catch (Exception ex)
             {

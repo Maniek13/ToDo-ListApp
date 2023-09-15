@@ -5,7 +5,7 @@
       >
 
     <DockPanel>
-        <ListView DockPanel.Dock="Top" x:Name="ListOfTasks" ItemsSource="{Binding Tasks}"   VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" >
+        <ListView DockPanel.Dock="Top" x:Name="ListOfTasks" ItemsSource="{Binding Tasks}"   VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" BorderThickness="0,0,0,0" >
             <ListView.ItemTemplate >
                 <DataTemplate>
                     <Button Tag="{Binding}" Click="Edit_BtnClick" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" Foreground="#FFBD1D1D" HorizontalContentAlignment="Stretch" >

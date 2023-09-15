@@ -12,6 +12,7 @@ namespace ToDoList.ViewModels
         {
             try
             {
+                CheckingValues.CheckTaskValues(task);
                 TaskDbControler taskDbControler = new();
                 taskDbControler.EditTask(ConversionHelper.ConvertToDbTask(task));
             }
@@ -19,8 +20,9 @@ namespace ToDoList.ViewModels
             {
                 throw new Exception(ex.Message, ex);
             }
-           
         }
+
+ 
 
     }
 }

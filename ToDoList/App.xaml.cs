@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Azure.Messaging;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Windows;
 using ToDoList.DbControler;
 using ToDoList.DbModels;
 using ToDoList.Helper;
+using ToDoList.Views;
 
 namespace ToDoList
 {
@@ -31,23 +33,22 @@ namespace ToDoList
 
                         if (!msg.IsNullOrEmpty())
                         {
-                            MessageBox.Show(msg);
-
+                            ReminderMsgWindow reminderMsgWindow = new(msg);
+                            reminderMsgWindow.Show();
                             taskScheduler.DeleteTaskShulder(id, date);
                         }
-
                     }
                     else
                     {
                         MessageBox.Show("Bad data format");
+                        Environment.Exit(0);
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    Environment.Exit(0);
                 }
-
-                Environment.Exit(0);
             }
             else
             {
