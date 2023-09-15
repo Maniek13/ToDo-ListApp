@@ -4,32 +4,34 @@
         xmlns:local="clr-namespace:ToDoList.Helper"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         Background="White">
-    <WrapPanel Margin="50,50,50,50" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-        <StackPanel x:Name="EditForm" Margin="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
-                <Label Width="80" Height="25" Padding="0,4,0,0">Name:</Label>
-                <TextBox Height="25" Text="{Binding TaskValue.Name}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black" />
-            </StackPanel>
-            <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
-                <Label Height="25" Width="80" Padding="0,4,0,0">Description:</Label>
-                <xctk:RichTextBox x:Name="DescriptionBox" Width="150" Text="{Binding TaskValue.Description}" MinHeight="25" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black">
-                    <xctk:RichTextBoxFormatBarManager.FormatBar>
-                        <xctk:RichTextBoxFormatBar />
-                    </xctk:RichTextBoxFormatBarManager.FormatBar>
-                </xctk:RichTextBox>
-            </StackPanel>
-            <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
-                <Label Height="25" Width="80" Padding="0,4,0,0">Type:</Label>
-                <ComboBox  Height="25" ItemsSource="{Binding Source={x:Static local:Resources.TaskTypes}}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding TaskValue.Type}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" Background="{x:Null}"/>
-            </StackPanel>
-            <Button  Click="EditTask_BtnClick" Background="White" BorderThickness="0.7">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <WrapPanel Margin="50,50,50,50" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+            <StackPanel x:Name="EditForm" Margin="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                    <Label Width="80" Height="25" Padding="0,4,0,0">Name:</Label>
+                    <TextBox Height="25" Text="{Binding TaskValue.Name}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                    <Label Height="25" Width="80" Padding="0,4,0,0">Description:</Label>
+                    <xctk:RichTextBox x:Name="DescriptionBox" Width="150" Text="{Binding TaskValue.Description}" MinHeight="25" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black">
+                        <xctk:RichTextBoxFormatBarManager.FormatBar>
+                            <xctk:RichTextBoxFormatBar />
+                        </xctk:RichTextBoxFormatBarManager.FormatBar>
+                    </xctk:RichTextBox>
+                </StackPanel>
+                <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                    <Label Height="25" Width="80" Padding="0,4,0,0">Type:</Label>
+                    <ComboBox  Height="25" ItemsSource="{Binding Source={x:Static local:Resources.TaskTypes}}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding TaskValue.Type}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" Background="{x:Null}"/>
+                </StackPanel>
+                <Button  Click="EditTask_BtnClick" Background="White" BorderThickness="0.7">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     Change task
-            </Button>
-        </StackPanel>
-    </WrapPanel>
+                </Button>
+            </StackPanel>
+        </WrapPanel>
+    </ScrollViewer>
 </UserControl>
