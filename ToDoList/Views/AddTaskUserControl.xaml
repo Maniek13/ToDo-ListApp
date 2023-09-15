@@ -8,7 +8,7 @@
              xmlns:helper="clr-namespace:ToDoList.Helper"
              mc:Ignorable="d" >
 
-    <WrapPanel Margin="50,50,50,50" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" >
+    <WrapPanel Margin="50,50,50,50" HorizontalAlignment="Center" VerticalAlignment="Center" >
         <StackPanel x:Name="EditForm" Margin="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                 <Label Width="80" Height="25" Padding="0,4,0,0">Name:</Label>

@@ -35,5 +35,18 @@ namespace ToDoList.DbControler
                 throw new Exception(ex.Message, ex);
             }
         }
+
+        public void EditTask(Task task)
+        {
+            try
+            {
+                dbContext.Tasks.Update(task);
+                dbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
     }
 }

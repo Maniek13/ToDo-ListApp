@@ -7,7 +7,7 @@ namespace ToDoList.ViewModels
 {
     public sealed class AddTaskUserControlViewModel
     {
-        TaskDbControler taskDbControler = new();
+        
         internal void AddTask(Task task, Reminder reminder = new Reminder())
         {
             try
@@ -18,6 +18,7 @@ namespace ToDoList.ViewModels
                     taskShulder.CreateTaskShulder(ConversionHelper.ConvertToDbReminder(reminder));
                 }
 
+                TaskDbControler taskDbControler = new();
                 taskDbControler.AddTask(ConversionHelper.ConvertToDbTask(task));
 
             }

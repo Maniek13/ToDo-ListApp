@@ -3,7 +3,8 @@ Application preview in App folder
 v0.5
 The application allows you to: 
 - add task
-- show list of it
+- edit task
+- show list of tasks
 - create reminder which be show like a Windows dialog
 
 If any notification have been missed, they will appear you at application startup.

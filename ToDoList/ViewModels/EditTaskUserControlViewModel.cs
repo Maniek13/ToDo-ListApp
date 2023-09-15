@@ -1,13 +1,25 @@
 ﻿using System;
+using ToDoList.DbControler;
 using ToDoList.Models;
+using ToDoList.Helper;
 
 namespace ToDoList.ViewModels
 {
     public sealed class EditTaskUserControlViewModel
     {
+
         internal void EditTask(Task task)
         {
-            throw new NotImplementedException($"Not implement exception. {task.Name} {task.Description} {task.Type}");
+            try
+            {
+                TaskDbControler taskDbControler = new();
+                taskDbControler.EditTask(ConversionHelper.ConvertToDbTask(task));
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+           
         }
 
     }
