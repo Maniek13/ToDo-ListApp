@@ -1,15 +1,14 @@
-﻿using Azure.Messaging;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Media;
 using System.Text;
 using System.Windows;
-using System.Windows.Interop;
 using ToDoList.DbControler;
-using ToDoList.Models;
 using ToDoList.Helper;
+using ToDoList.Models;
 using ToDoList.Views;
-using System.Linq;
 
 namespace ToDoList
 {
@@ -58,7 +57,7 @@ namespace ToDoList
                     List<Reminder> reminders = taskScheduler.DeleteExpiredShulder(DateTime.Now).Select(el => ConversionHelper.ConvertToReminder(el)).ToList();
                     if(reminders.Count > 0)
                     {
-                        StringBuilder sb = new StringBuilder();
+                        StringBuilder sb = new();
 
                         sb.AppendLine("Expired reminders:");
                         sb.AppendLine(@"\line");
@@ -81,9 +80,10 @@ namespace ToDoList
                     wnd.ErrorMsg.Text = ex.Message;
                 }
 
-
                 wnd.Show();
             }
         }
     }
 }
+
+

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows;
 
 namespace ToDoList.Views
@@ -13,8 +14,9 @@ namespace ToDoList.Views
         {
             _expired = expired;
             InitializeComponent();
-
+            SystemSounds.Beep.Play();
             MessageBox.Text = msg;
+
         }
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
