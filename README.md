@@ -15,19 +15,25 @@ Added format bar and multiline text field (Format bar will appear when the mouse
 
 Main window
 
-<img width="589" alt="image" src="https://github.com/Maniek13/ToDoReminder/assets/47826375/57ebb832-7c0f-4c42-9764-71a942ea977d">
+<img width="586" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/77928ae2-bcdb-4ec7-b283-e671ccf516d1">
 
-<img width="595" alt="image" src="https://github.com/Maniek13/ToDoReminder/assets/47826375/967369a8-b682-4958-ab46-b628108a25e0">
+<img width="592" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/c64afa49-e2c5-43c2-aab1-b7b2c87f99ba">
 
 List of tasks
 
-<img width="589" alt="image" src="https://github.com/Maniek13/ToDoReminder/assets/47826375/a8260bd1-684f-41ba-be0c-f0ad5d901a97">
+<img width="595" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/f3b3e733-2a5a-4593-bf9f-52dbe0d6588d">
 
 Edit Task
 
-<img width="591" alt="image" src="https://github.com/Maniek13/ToDoReminder/assets/47826375/a1f05b8a-ec79-40da-9bc2-6b2e17d421c6">
+<img width="591" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/b8ba91e8-a8c9-4e43-bc9d-b94c769dfa2b">
 
 Create reminder
 
-<img width="590" alt="image" src="https://github.com/Maniek13/ToDoReminder/assets/47826375/e694102c-3d5b-49c9-8b67-0adf301b0d37">
+<img width="591" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/e7800b01-065c-432e-ad4b-8338225067a1">
+
+<img width="589" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/5ffd3ef9-47a3-4549-a6f7-116fa94a2e7f">
+
+Reminder notyfication
+
+<img width="146" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/1081666d-618e-4231-afd9-fda50eae509d">
 
