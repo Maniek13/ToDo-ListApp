@@ -21,7 +21,7 @@ Main window
 
 List of tasks
 
-<img width="595" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/f3b3e733-2a5a-4593-bf9f-52dbe0d6588d">
+<img width="589" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/56bb751d-d87e-4848-8188-7a14a71aa9b6">
 
 Edit Task
 
@@ -39,6 +39,8 @@ Reminder notyfication
 
 Expired notifications
 
-<img width="613" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/ec3f42e6-9fdf-45ef-8bf1-9a7071ccac1e">
+<img width="613" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/5ce78922-cff1-4ba5-9387-36aee7452b96">
+
+
 
 

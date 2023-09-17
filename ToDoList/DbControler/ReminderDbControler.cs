@@ -24,7 +24,7 @@ namespace ToDoList.DbControler
             }
 
         }
-        public void DeleteExecutedReminder(int id)
+        public void DeleteReminder(int id)
         {
             try
             {

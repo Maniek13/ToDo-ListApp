@@ -58,15 +58,14 @@ namespace ToDoList
                     {
                         StringBuilder sb = new();
 
-                        sb.AppendLine("Expired reminders:");
+                        sb.AppendLine("{\\rtf1\\ansi\\ansicpg1252\\uc1\\htmautsp\\deff2{\\fonttbl{\\f0\\fcharset0 Times New Roman;}}{\\colortbl\\red0\\green0\\blue0;\\red255\\green255\\blue255;}\\loch\\hich\\dbch\\pard\\plain\\ltrpar\\itap0{\\lang1033\\fs18\\f2\\cf0 \\cf0\\ql{\\fs19\\f0 {\\ltrch Expired reminders:}\\li0\\ri0\\sa0\\sb0\\fi0\\qc\\par}\r\n}\r\n}");
                         sb.AppendLine(@"\line");
 
                         for (int i = 0; i < reminders.Count; ++i)
                         {
-                            sb.AppendLine(@"\line");
-                            sb.AppendLine($"Data: {reminders[i].Date}");
-                            sb.AppendLine(@"\line");
+                            sb.AppendLine("{\\rtf1\\ansi\\ansicpg1252\\uc1\\htmautsp\\deff2{\\fonttbl{\\f0\\fcharset0 Times New Roman;}}{\\colortbl\\red0\\green0\\blue0;\\red255\\green255\\blue255;}\\loch\\hich\\dbch\\pard\\plain\\ltrpar\\itap0{\\lang1033\\fs18\\f2\\cf0 \\cf0\\ql{\\fs19\\f0 {\\lang1045\\ltrch Data: "+ reminders[i].Date.ToString("dd-MM-yy") + "}\\li0\\ri0\\sa0\\sb0\\fi0\\ql\\par}\r\n}\r\n}");
                             sb.AppendLine($"{reminders[i].Description}");
+                            sb.AppendLine(@"\line");
                         }
 
                         ReminderMsgWindow reminderMsgWindow = new(sb.ToString(), true);

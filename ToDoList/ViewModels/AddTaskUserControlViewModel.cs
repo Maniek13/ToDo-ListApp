@@ -13,15 +13,18 @@ namespace ToDoList.ViewModels
             try
             {
                 CheckingValues.CheckTaskValues(task);
+
+                TaskDbControler taskDbControler = new();
+                var taskId = taskDbControler.AddTask(ConversionHelper.ConvertToDbTask(task));
+
+
                 if (task.HasReminder)
                 {
+                    reminder.TaskID = taskId;
+
                     TaskShulder taskShulder = new();
                     taskShulder.CreateTaskShulder(ConversionHelper.ConvertToDbReminder(reminder));
                 }
-
-                TaskDbControler taskDbControler = new();
-                taskDbControler.AddTask(ConversionHelper.ConvertToDbTask(task));
-
             }
             catch (Exception ex)
             {

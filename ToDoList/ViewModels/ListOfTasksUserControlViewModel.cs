@@ -10,8 +10,8 @@ namespace ToDoList.ViewModels
 {
     public sealed class ListOfTasksUserControlViewModel
     {
-        TaskDbControler taskDbControler = new();
-        ReminderDbControler reminderDbControler = new();
+        readonly TaskDbControler taskDbControler = new();
+        readonly ReminderDbControler reminderDbControler = new();
 
 #pragma warning disable CS8601, CS8618, IDE1006
         private ObservableCollection<Task> _tasks { get; set; }
@@ -37,13 +37,18 @@ namespace ToDoList.ViewModels
                 taskDbControler.DeleteTask(task.Id);
                 _tasks.Remove(task);
 
-                var reminder = reminderDbControler.GetReminder(task.Id);
-
-                if (reminder != null)
+                if(task.HasReminder)
                 {
-                    TaskShulder taskShulder = new TaskShulder();
-                    taskShulder.DeleteTaskShulder(reminder.Id, reminder.Date);
+                    var reminder = reminderDbControler.GetReminder(task.Id);
+
+                    if(reminder != null)
+                    {
+                        TaskShulder taskShulder = new();
+                        taskShulder.DeleteTaskShulder(reminder.Id, reminder.Date);
+                    }
                 }
+
+              
             }
             catch (Exception ex)
             {

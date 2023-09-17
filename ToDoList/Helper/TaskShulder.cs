@@ -9,6 +9,7 @@ namespace ToDoList.Helper
     internal class TaskShulder
     {
         readonly ReminderDbControler reminderDbController = new();
+        readonly TaskDbControler taskDbControler = new();
         internal void CreateTaskShulder(Reminder reminder)
         {
             int id = 0;
@@ -28,7 +29,7 @@ namespace ToDoList.Helper
             catch (Exception ex)
             {
                 if (id > 0)
-                    reminderDbController.DeleteExecutedReminder(id);
+                    reminderDbController.DeleteReminder(id);
                 throw new Exception(ex.Message);
             }
         }
@@ -37,9 +38,25 @@ namespace ToDoList.Helper
         {
             try
             {
-                reminderDbController.DeleteExecutedReminder(id);
+                reminderDbController.DeleteReminder(id);
                 using TaskService ts = new();
                 ts.RootFolder.DeleteTask($"\\ToDoApp\\{date:dd-MM-yy}\\{id}");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        internal void DeleteTaskShulder(int taskId)
+        {
+            try
+            {
+                var reminder = reminderDbController.GetReminder(taskId) ?? throw new Exception($"No reminders for task id: {taskId}");
+
+                reminderDbController.DeleteReminder(reminder.Id);
+                using TaskService ts = new();
+                ts.RootFolder.DeleteTask($"\\ToDoApp\\{reminder.Date:dd-MM-yy}\\{reminder.Id}");
             }
             catch (Exception ex)
             {
@@ -55,9 +72,21 @@ namespace ToDoList.Helper
 
                 for (int i = 0; i < reminders.Count; ++i)
                 {
-                    reminderDbController.DeleteExecutedReminder(reminders[i].Id);
+                    reminderDbController.DeleteReminder(reminders[i].Id);
                     using TaskService ts = new();
                     ts.RootFolder.DeleteTask($"\\ToDoApp\\{reminders[i].Date:dd-MM-yy}\\{reminders[i].Id}");
+
+                    if (reminders[i].TaskID != null)
+                    {
+                        var task = taskDbControler.GetTask((int)reminders[i].TaskID);
+
+                        if(task != null)
+                        {
+                            task.HasReminder = false;
+                            taskDbControler.EditTask(task);
+                        }
+                       
+                    }
                 }
 
                 return reminders;

@@ -21,5 +21,41 @@ namespace ToDoList.ViewModels
                 throw new Exception(ex.Message, ex);
             }
         }
+        internal Reminder? GetReminderTask(int taskId)
+        {
+            try
+            {
+                ReminderDbControler reminderDbControler = new();
+                var reminder = reminderDbControler.GetReminder(taskId);
+
+                if(reminder != null)
+                    return ConversionHelper.ConvertToReminder(reminder);
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
+        internal void EditOrCreateReminder(int taskId, Reminder reminder, bool edit)
+        {
+            try
+            {
+                TaskShulder taskShulder = new();
+
+                if (edit)
+                    taskShulder.DeleteTaskShulder(taskId);
+
+
+                reminder = reminder with { Id = 0 };
+                taskShulder.CreateTaskShulder(ConversionHelper.ConvertToDbReminder(reminder));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
     }
 }

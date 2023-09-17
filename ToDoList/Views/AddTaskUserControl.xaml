@@ -8,7 +8,7 @@
              mc:Ignorable="d" >
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <WrapPanel Margin="50,50,50,50" HorizontalAlignment="Center" VerticalAlignment="Center" >
-            <StackPanel x:Name="EditForm" Margin="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel x:Name="AddForm" Margin="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                     <Label Width="80" Height="25" Padding="0,4,0,0">Name:</Label>
                     <TextBox Height="25" Text="{Binding TaskValue.Name}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black" />

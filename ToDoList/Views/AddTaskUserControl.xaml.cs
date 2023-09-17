@@ -17,7 +17,7 @@ namespace ToDoList.Views
         {
             InitializeComponent();
             DataContext = ViewModel = new AddTaskUserControlViewModel();
-            EditForm.DataContext = this;
+            AddForm.DataContext = this;
             mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
         }
 #pragma warning restore CS8601, CS8618
@@ -76,6 +76,5 @@ namespace ToDoList.Views
             ReminderForm.Visibility = Visibility.Hidden;
             ReminderForm.Height = 0;
         }
-
     }
 }

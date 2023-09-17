@@ -35,6 +35,17 @@ namespace ToDoList.DbControler
                 throw new Exception(ex.Message, ex);
             }
         }
+        public Task? GetTask(int id)
+        {
+            try
+            {
+                return dbContext.Tasks.Find(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
 
         public void EditTask(Task task)
         {
@@ -52,10 +63,7 @@ namespace ToDoList.DbControler
         {
             try
             {
-                var task = dbContext.Tasks.Find(id);
-
-                if (task == null)
-                    throw new Exception("Task was not existing");
+                var task = dbContext.Tasks.Find(id) ?? throw new Exception("Task was not existing");
 
                 dbContext.Tasks.Remove(task);
                 dbContext.SaveChanges();

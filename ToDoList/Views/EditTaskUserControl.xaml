@@ -23,6 +23,18 @@
                     <Label Height="25" Width="80" Padding="0,4,0,0">Type:</Label>
                     <ComboBox  Height="25" ItemsSource="{Binding Source={x:Static local:Resources.TaskTypes}}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding TaskValue.Type}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" Background="{x:Null}"/>
                 </StackPanel>
+
+                <StackPanel>
+                    <CheckBox Checked="HasReminderCheckBox_Checked" Unchecked="HasReminderCheckBox_UnChecked" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" IsChecked="{Binding TaskValue.HasReminder}">Reminder</CheckBox>
+                </StackPanel>
+                <StackPanel x:Name="ReminderForm" Margin="0,10,0,0" Visibility="Hidden" Height="0">
+                    <xctk:DateTimePicker Value="{Binding ReminderValue.Date}"></xctk:DateTimePicker>
+                    <StackPanel Margin="0,0,0,10" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <Label Height="25" Width="80" Padding="0,4,0,0">Description:</Label>
+                        <TextBox Height="25" Text="{Binding ReminderValue.Description}" MinWidth="150" MaxWidth="300" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black" />
+                    </StackPanel>
+                </StackPanel>
+                
                 <Button  Click="EditTask_BtnClick" Background="White" BorderThickness="0.7">
                     <Button.Resources>
                         <Style TargetType="Border">
