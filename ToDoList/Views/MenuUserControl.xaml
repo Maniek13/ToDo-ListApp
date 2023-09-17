@@ -17,7 +17,7 @@
             </MenuItem>
             <MenuItem Header="Create reminder" Height="25" Click="ReminderCreate_BtnClick">
                 <MenuItem.Icon>
-                    <Image Source="/Views/Icons/add.png"/>
+                    <Image Source="/Views/Icons/notification.png"/>
                 </MenuItem.Icon>
             </MenuItem>
         </MenuItem>

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Views\add.png" />
+    <None Remove="Views\Icons\notification.png" />
     <None Remove="Views\list.png" />
   </ItemGroup>
 
@@ -28,8 +29,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Views\Icons\add.png" />
-    <Resource Include="Views\Icons\list.png" />
+    <Resource Include="Views\Icons\add.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Icons\list.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Views\Icons\notification.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
