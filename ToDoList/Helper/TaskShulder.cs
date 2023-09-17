@@ -80,12 +80,12 @@ namespace ToDoList.Helper
                     {
                         var task = taskDbControler.GetTask((int)reminders[i].TaskID);
 
-                        if(task != null)
+                        if (task != null)
                         {
                             task.HasReminder = false;
                             taskDbControler.EditTask(task);
                         }
-                       
+
                     }
                 }
 

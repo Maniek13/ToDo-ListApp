@@ -28,7 +28,7 @@ namespace ToDoList.ViewModels
                 ReminderDbControler reminderDbControler = new();
                 var reminder = reminderDbControler.GetReminder(taskId);
 
-                if(reminder != null)
+                if (reminder != null)
                     return ConversionHelper.ConvertToReminder(reminder);
 
                 return null;
@@ -39,18 +39,22 @@ namespace ToDoList.ViewModels
             }
         }
 
-        internal void EditOrCreateReminder(int taskId, Reminder reminder, bool edit)
+        internal void EditOrCreateReminder(Task task, Reminder reminder, bool edit)
         {
             try
             {
                 TaskShulder taskShulder = new();
 
                 if (edit)
-                    taskShulder.DeleteTaskShulder(taskId);
+                    taskShulder.DeleteTaskShulder(task.Id);
 
 
-                reminder = reminder with { Id = 0 };
-                taskShulder.CreateTaskShulder(ConversionHelper.ConvertToDbReminder(reminder));
+                if (task.HasReminder)
+                {
+                    reminder = reminder with { Id = 0 };
+                    taskShulder.CreateTaskShulder(ConversionHelper.ConvertToDbReminder(reminder));
+                }
+
             }
             catch (Exception ex)
             {

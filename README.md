@@ -13,6 +13,11 @@ v0.51
 Added own window to show messages
 Added format bar and multiline text field (Format bar will appear when the mouse is released after the selection)
 
+v0.55
+Added delete task
+Added edit task reminder
+
+
 Main window
 
 <img width="593" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/3843dd2c-1343-4ddf-ad6d-59f578c94b34">

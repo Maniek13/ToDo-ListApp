@@ -26,7 +26,7 @@ namespace ToDoList.Views
             if (reminder != null)
                 ReminderValue = (Reminder)reminder;
 
-            
+
 
             EditForm.DataContext = this;
             mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
@@ -66,7 +66,7 @@ namespace ToDoList.Views
                 mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
 
                 ViewModel.EditTask(TaskValue);
-                ViewModel.EditOrCreateReminder(TaskValue.Id, ReminderValue, hasReminder);
+                ViewModel.EditOrCreateReminder(TaskValue, ReminderValue, hasReminder);
 
                 mainWindow.MainContext.Content = new ListOfTasksUserControl();
             }

@@ -37,18 +37,18 @@ namespace ToDoList.ViewModels
                 taskDbControler.DeleteTask(task.Id);
                 _tasks.Remove(task);
 
-                if(task.HasReminder)
+                if (task.HasReminder)
                 {
                     var reminder = reminderDbControler.GetReminder(task.Id);
 
-                    if(reminder != null)
+                    if (reminder != null)
                     {
                         TaskShulder taskShulder = new();
                         taskShulder.DeleteTaskShulder(reminder.Id, reminder.Date);
                     }
                 }
 
-              
+
             }
             catch (Exception ex)
             {
