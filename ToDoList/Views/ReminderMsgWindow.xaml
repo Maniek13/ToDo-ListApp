@@ -8,7 +8,8 @@
         Title="Reminder" 
         SizeToContent="Height"
         Width="200"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        Icon="Icons/notification.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

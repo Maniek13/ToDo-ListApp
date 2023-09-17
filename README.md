@@ -15,9 +15,7 @@ Added format bar and multiline text field (Format bar will appear when the mouse
 
 Main window
 
-<img width="586" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/77928ae2-bcdb-4ec7-b283-e671ccf516d1">
-
-<img width="592" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/c64afa49-e2c5-43c2-aab1-b7b2c87f99ba">
+<img width="593" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/3843dd2c-1343-4ddf-ad6d-59f578c94b34">
 
 List of tasks
 
