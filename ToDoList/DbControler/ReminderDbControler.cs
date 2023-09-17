@@ -40,6 +40,20 @@ namespace ToDoList.DbControler
             }
         }
 
+        public Reminder? GetReminder(int taskID)
+        {
+            try
+            {
+                Reminder? reminder = dbContext.Reminder.Where(r => r.TaskID == taskID).FirstOrDefault();
+
+                return reminder;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
         public string GetReminderMsg(int id)
         {
             try

@@ -1,7 +1,7 @@
 ﻿using System;
 using ToDoList.DbControler;
-using ToDoList.Models;
 using ToDoList.Helper;
+using ToDoList.Models;
 
 namespace ToDoList.ViewModels
 {
@@ -16,13 +16,10 @@ namespace ToDoList.ViewModels
                 TaskDbControler taskDbControler = new();
                 taskDbControler.EditTask(ConversionHelper.ConvertToDbTask(task));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message, ex);
             }
         }
-
- 
-
     }
 }

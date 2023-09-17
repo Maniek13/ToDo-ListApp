@@ -2,8 +2,6 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Interop;
-using ToDoList.Helper;
 using ToDoList.Models;
 using ToDoList.ViewModels;
 

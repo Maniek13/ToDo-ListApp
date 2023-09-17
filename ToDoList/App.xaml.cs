@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Media;
 using System.Text;
 using System.Windows;
 using ToDoList.DbControler;
@@ -55,7 +54,7 @@ namespace ToDoList
                 try
                 {
                     List<Reminder> reminders = taskScheduler.DeleteExpiredShulder(DateTime.Now).Select(el => ConversionHelper.ConvertToReminder(el)).ToList();
-                    if(reminders.Count > 0)
+                    if (reminders.Count > 0)
                     {
                         StringBuilder sb = new();
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using ToDoList.DbControler;
@@ -10,6 +11,8 @@ namespace ToDoList.ViewModels
     public sealed class ListOfTasksUserControlViewModel
     {
         TaskDbControler taskDbControler = new();
+        ReminderDbControler reminderDbControler = new();
+
 #pragma warning disable CS8601, CS8618, IDE1006
         private ObservableCollection<Task> _tasks { get; set; }
 #pragma warning restore S8601, CS8618, IDE1006
@@ -17,8 +20,35 @@ namespace ToDoList.ViewModels
 
         public void GetList()
         {
-            List<Task> list = taskDbControler.GetAllTasks().Select(el => ConversionHelper.ConvertToTask(el)).ToList();
-            _tasks = new ObservableCollection<Task>(list);
+            try
+            {
+                List<Task> list = taskDbControler.GetAllTasks().Select(el => ConversionHelper.ConvertToTask(el)).ToList();
+                _tasks = new ObservableCollection<Task>(list);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+        public void DeleteTask(Task task)
+        {
+            try
+            {
+                taskDbControler.DeleteTask(task.Id);
+                _tasks.Remove(task);
+
+                var reminder = reminderDbControler.GetReminder(task.Id);
+
+                if (reminder != null)
+                {
+                    TaskShulder taskShulder = new TaskShulder();
+                    taskShulder.DeleteTaskShulder(reminder.Id, reminder.Date);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
         }
     }
 }

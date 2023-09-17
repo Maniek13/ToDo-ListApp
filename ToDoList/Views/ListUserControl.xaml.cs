@@ -17,9 +17,20 @@ namespace ToDoList.Views
         public ListOfTasksUserControl()
         {
             InitializeComponent();
-            DataContext = ViewModel = new ListOfTasksUserControlViewModel();
-            mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-            ViewModel.GetList();
+
+            try
+            {
+                DataContext = ViewModel = new ListOfTasksUserControlViewModel();
+                mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+                mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+                ViewModel.GetList();
+            }
+            catch (Exception ex)
+            {
+                mainWindow.ErrorMsg.Text = ex.Message;
+                mainWindow.ErrorMsg.Visibility = Visibility.Visible;
+            }
+
         }
 #pragma warning restore CS8601, CS8618
 
@@ -32,10 +43,23 @@ namespace ToDoList.Views
             }
             catch (Exception ex)
             {
-                mainWindow.ErrorMsg.Visibility = Visibility.Visible;
                 mainWindow.ErrorMsg.Text = ex.Message;
+                mainWindow.ErrorMsg.Visibility = Visibility.Visible;
             }
+        }
 
+        private void Delete_BtnClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+                ViewModel.DeleteTask((Task)((Button)sender).Tag);
+            }
+            catch (Exception ex)
+            {
+                mainWindow.ErrorMsg.Text = ex.Message;
+                mainWindow.ErrorMsg.Visibility = Visibility.Visible;
+            }
         }
     }
 }

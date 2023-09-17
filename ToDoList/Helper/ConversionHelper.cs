@@ -1,5 +1,4 @@
-﻿using System.IO;
-using DbReminder = ToDoList.DbModels.Reminder;
+﻿using DbReminder = ToDoList.DbModels.Reminder;
 using DbTask = ToDoList.DbModels.Task;
 using Reminder = ToDoList.Models.Reminder;
 using Task = ToDoList.Models.Task;

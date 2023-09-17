@@ -7,13 +7,13 @@ namespace ToDoList.ViewModels
 {
     public sealed class AddTaskUserControlViewModel
     {
-        
+
         internal void AddTask(Task task, Reminder reminder = new Reminder())
         {
             try
             {
                 CheckingValues.CheckTaskValues(task);
-                if(task.HasReminder)
+                if (task.HasReminder)
                 {
                     TaskShulder taskShulder = new();
                     taskShulder.CreateTaskShulder(ConversionHelper.ConvertToDbReminder(reminder));
@@ -23,7 +23,7 @@ namespace ToDoList.ViewModels
                 taskDbControler.AddTask(ConversionHelper.ConvertToDbTask(task));
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message, ex);
             }
