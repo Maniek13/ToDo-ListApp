@@ -11,12 +11,16 @@
             <StackPanel x:Name="AddForm" Margin="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                     <Label Width="80" Height="25" Padding="0,4,0,0">Name:</Label>
-                    <TextBox Height="25" Text="{Binding TaskValue.Name}" Width="200" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black">
+                    <TextBox Height="25" Text="{Binding TaskValue.Name}" Width="250" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black">
                     </TextBox>
                 </StackPanel>
                 <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                    <Label Width="80" Height="25" Padding="0,4,0,0">End date:</Label>
+                    <xctk:DateTimePicker Width="250" Value="{Binding TaskValue.EndDate}"></xctk:DateTimePicker>
+                </StackPanel>
+                <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                     <Label Height="25" Width="80" Padding="0,4,0,0">Description:</Label>
-                    <xctk:RichTextBox Height="100" Text="{Binding TaskValue.Description}" Width="200" BorderThickness="0.5,0.5,0.5,0.5" VerticalContentAlignment="Center" BorderBrush="Black" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                    <xctk:RichTextBox Height="100" Text="{Binding TaskValue.Description}" Width="250" BorderThickness="0.5,0.5,0.5,0.5" VerticalContentAlignment="Center" BorderBrush="Black" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                         <xctk:RichTextBoxFormatBarManager.FormatBar>
                             <xctk:RichTextBoxFormatBar />
                         </xctk:RichTextBoxFormatBarManager.FormatBar>
@@ -29,7 +33,7 @@
                 </StackPanel>
                 <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                     <Label Height="25" Width="80" Padding="0,4,0,0">Type:</Label>
-                    <ComboBox  Height="25" ItemsSource="{Binding Source={x:Static helper:Resources.TaskTypes}}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding TaskValue.Type}" Width="200" BorderThickness="0.5,0.5,0.5,0.5" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="White"/>
+                    <ComboBox  Height="25" ItemsSource="{Binding Source={x:Static helper:Resources.TaskTypes}}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding TaskValue.Type}" Width="250" BorderThickness="0.5,0.5,0.5,0.5" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="White"/>
                 </StackPanel>
                 <StackPanel>
                     <CheckBox Checked="HasReminderCheckBox_Checked" Unchecked="HasReminderCheckBox_UnChecked" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" IsChecked="{Binding TaskValue.HasReminder}">Reminder</CheckBox>

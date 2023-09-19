@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d">
-    <ScrollViewer  VerticalScrollBarVisibility="Auto">
+    <ScrollViewer  VerticalScrollBarVisibility="Auto" >
         <StackPanel x:Name="NewReminderForm">
             <Grid x:Name="NewRemindwerGrid" Margin="50,20,50,20"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="Auto" >
                 <Grid.RowDefinitions>

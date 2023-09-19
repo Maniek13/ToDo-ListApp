@@ -13,6 +13,7 @@ namespace ToDoList.Views
         private readonly MainWindow mainWindow;
         internal ListOfTasksUserControlViewModel ViewModel { get; }
 
+
 #pragma warning disable CS8601, CS8618
         public ListOfTasksUserControl()
         {

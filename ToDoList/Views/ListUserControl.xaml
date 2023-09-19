@@ -14,9 +14,15 @@
                                 <ColumnDefinition Width="25"/>
                             </Grid.ColumnDefinitions>
                             <Button Grid.Column="0" Tag="{Binding}" Click="Edit_BtnClick" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" Foreground="#FFBD1D1D" HorizontalContentAlignment="Stretch" >
-                                <StackPanel>
-                                    <TextBlock x:Name="LoginField" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="25"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <RadioButton Grid.Column="0" Background="{Binding GetColor}" IsHitTestVisible="False" />
+                                    <TextBlock Grid.Column="1"  x:Name="LoginField" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Grid>
                             </Button>
                             <Button Grid.Column="1" Tag="{Binding}" Click="Delete_BtnClick" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="0,1,1,1" Foreground="Black">X</Button>
                         </Grid>

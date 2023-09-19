@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace ToDoList.DbModels
@@ -13,6 +14,9 @@ namespace ToDoList.DbModels
         public string Description { get; set; } = "";
         [Required]
         public int Type { get; set; }
+
+        [Required]
+        public DateTime EndDate { get; set; }
         [Required]
         [DefaultValue(false)]
         public bool HasReminder { get; set; } = false;

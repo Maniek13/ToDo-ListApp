@@ -8,15 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <None Remove="Controllers\**" />
+    <Page Remove="Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Views\add.png" />
     <None Remove="Views\Icons\addNotification.png" />
     <None Remove="Views\Icons\notification.png" />
     <None Remove="Views\Icons\reminder.png" />
     <None Remove="Views\list.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <ItemGroup>

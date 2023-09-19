@@ -24,15 +24,15 @@ Main window
 
 List of tasks
 
-<img width="593" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/5b5d665f-5434-4a1d-853b-73ff20d633d7">
+<img width="595" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/df2736de-a1c8-4c91-99cc-341cdb58f8b8">
 
 Edit task
 
-<img width="592" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/c9ead909-aa70-4497-8a83-bde210b52127">
+<img width="590" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/dad656bf-3ba7-41b4-8d1a-b71733a147be">
 
 Add task
 
-<img width="596" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/7e0948d4-ea6e-4005-a2f1-8040e5e566af">
+<img width="590" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/c244acfc-bcb2-4c9a-9707-8e56474c7a7a">
 
 Create reminder
 

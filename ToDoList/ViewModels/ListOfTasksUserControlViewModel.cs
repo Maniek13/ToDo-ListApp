@@ -18,6 +18,7 @@ namespace ToDoList.ViewModels
 #pragma warning restore S8601, CS8618, IDE1006
         public ObservableCollection<Task> Tasks { get { return _tasks; } }
 
+
         public void GetList()
         {
             try

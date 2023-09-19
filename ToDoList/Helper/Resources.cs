@@ -9,5 +9,12 @@ namespace ToDoList.Helper
             {"Prority", 1},
             {"Casual", 2}
         };
+
+
+        public static Dictionary<bool, string> EndedStatusColor = new Dictionary<bool, string>()
+        {
+            { true , "red"},
+            { false, "green" }
+        };
     }
 }
