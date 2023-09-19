@@ -1,25 +1,37 @@
 Application preview in App folder
 
 v0.5
+
 The application allows you to: 
+
 - add task
+
 - edit task
+
 - show list of tasks
+
 - create reminder which be show like a Windows dialog
+
 
 If any notification have been missed, they will appear you at application startup.
 
 v0.51
+
 Added own window to show messages
+
 Added format bar and multiline text field (Format bar will appear when the mouse is released after the selection)
 
 v0.55
+
 Added delete task
+
 Added edit task reminder
 
 v0.6
-Add sort by name
-Add drop and down function to holds right button to change list order
+
+Added sort by name
+
+Added drop and down function to holds right button to change list order
 
 Main window
 
