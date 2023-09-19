@@ -4,7 +4,7 @@ namespace ToDoListTests
 {
     public class TaskControllerTests
     {
-        TaskDbControler db = new TaskDbControler();
+        readonly TaskDbControler db = new();
 
         [Test]
         public void ShowTasks()
@@ -22,7 +22,7 @@ namespace ToDoListTests
 
                 Assert.DoesNotThrow(() => {
                     var x = db.GetAllTasks();
-                    Assert.IsInstanceOf<List<ToDoList.DbModels.Task>>(x);
+                    Assert.That(x, Is.InstanceOf<List<ToDoList.DbModels.Task>>());
                 });
 
                 db.DeleteTask(id);
@@ -69,7 +69,7 @@ namespace ToDoListTests
                 int id = 0;
                 Assert.DoesNotThrow(() => {
 
-                    ToDoList.DbModels.Task task = new ToDoList.DbModels.Task()
+                    ToDoList.DbModels.Task task = new ()
                     {
                         Description = "Test",
                         Name = "Test",
@@ -120,7 +120,7 @@ namespace ToDoListTests
                 });
 
                 var test = db.GetTask(id);
-                Assert.That(test == null);
+                Assert.That(test, Is.EqualTo(null));
             }
             catch (Exception ex)
             {
