@@ -2,25 +2,25 @@ namespace ToDoListTests
 {
     public class ReminderControllerTests
     {
-        [SetUp]
+        [Test]
         public void AddReminder()
         {
             Assert.Fail();
         }
 
-        [SetUp]
+        [Test]
         public void DeleteExecutedReminder()
         {
             Assert.Fail();
         }
 
-        [SetUp]
+        [Test]
         public void GetReminderMsg()
         {
             Assert.Fail();
         }
 
-        [SetUp]
+        [Test]
         public void GetExpiredReminder()
         {
             Assert.Fail();

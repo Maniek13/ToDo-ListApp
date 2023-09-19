@@ -6,7 +6,7 @@ using ToDoList.DbModels;
 
 namespace ToDoList.DbControler
 {
-    internal class ReminderDbControler
+    public class ReminderDbControler
     {
         readonly ToDoAppDbContext dbContext = new();
         public int AddReminder(Reminder reminder)

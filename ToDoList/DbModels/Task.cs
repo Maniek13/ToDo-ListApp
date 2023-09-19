@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ToDoList.DbModels
 {
-    internal record Task
+    public record Task
     {
         [Key]
         public int Id { get; set; }

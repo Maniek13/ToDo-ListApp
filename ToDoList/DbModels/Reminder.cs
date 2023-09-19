@@ -5,7 +5,7 @@ using ToDoList.Interfaces;
 
 namespace ToDoList.DbModels
 {
-    internal record Reminder : IReminder
+    public record Reminder : IReminder
     {
         [Key]
         public int Id { get; set; }

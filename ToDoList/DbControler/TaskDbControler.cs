@@ -6,7 +6,7 @@ using ToDoList.DbModels;
 
 namespace ToDoList.DbControler
 {
-    internal class TaskDbControler
+    public class TaskDbControler
     {
         readonly ToDoAppDbContext dbContext = new();
         public int AddTask(Task task)
