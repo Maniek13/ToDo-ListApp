@@ -17,8 +17,10 @@
   <ItemGroup>
     <None Remove="Views\add.png" />
     <None Remove="Views\Icons\addNotification.png" />
+    <None Remove="Views\Icons\down.png" />
     <None Remove="Views\Icons\notification.png" />
     <None Remove="Views\Icons\reminder.png" />
+    <None Remove="Views\Icons\up.png" />
     <None Remove="Views\list.png" />
   </ItemGroup>
 
@@ -38,6 +40,7 @@
     <Resource Include="Views\Icons\add.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Views\Icons\down.png" />
     <Resource Include="Views\Icons\list.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -47,6 +50,7 @@
     <Resource Include="Views\Icons\reminder.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Views\Icons\up.png" />
   </ItemGroup>
 
   <ItemGroup>

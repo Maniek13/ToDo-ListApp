@@ -5,7 +5,7 @@ using ToDoList.Interfaces;
 
 namespace ToDoList.Models
 {
-    public struct Task : ITask
+    public class Task : ITask
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -18,13 +18,15 @@ namespace ToDoList.Models
         {
             get
             {
-                bool status = EndDate <= DateTime.Now ? true : false;
+                bool status = EndDate <= DateTime.Now;
                 return Resources.EndedStatusColor.Select(el => el).Where(el => el.Key == status).FirstOrDefault().Value;
             }
         }
         public Task()
         {
             EndDate = DateTime.Now;
+            Name = string.Empty;
+            Description = string.Empty;
         }
     }
 }

@@ -17,6 +17,9 @@ v0.55
 Added delete task
 Added edit task reminder
 
+v0.6
+Add sort by name
+Add drop and down function to holds right button to change list order
 
 Main window
 
@@ -24,7 +27,7 @@ Main window
 
 List of tasks
 
-<img width="595" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/df2736de-a1c8-4c91-99cc-341cdb58f8b8">
+<img width="591" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/d64b3ea5-a0e6-4671-b3cb-63796c7423b5">
 
 Edit task
 
