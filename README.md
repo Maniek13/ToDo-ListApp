@@ -20,21 +20,25 @@ Added edit task reminder
 
 Main window
 
-<img width="593" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/3843dd2c-1343-4ddf-ad6d-59f578c94b34">
+<img width="591" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/47d40325-0458-48ec-a87e-042b3414d613">
 
 List of tasks
 
-<img width="589" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/56bb751d-d87e-4848-8188-7a14a71aa9b6">
+<img width="593" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/5b5d665f-5434-4a1d-853b-73ff20d633d7">
 
-Edit Task
+Edit task
 
-<img width="591" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/b8ba91e8-a8c9-4e43-bc9d-b94c769dfa2b">
+<img width="592" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/c9ead909-aa70-4497-8a83-bde210b52127">
+
+Add task
+
+<img width="596" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/7e0948d4-ea6e-4005-a2f1-8040e5e566af">
 
 Create reminder
 
-<img width="591" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/e7800b01-065c-432e-ad4b-8338225067a1">
+<img width="597" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/ed4cd379-1fcf-40c2-a5e2-60c58c5041be">
 
-<img width="589" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/5ffd3ef9-47a3-4549-a6f7-116fa94a2e7f">
+<img width="597" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/1c3dac4f-7c9b-4404-b7ed-63a71847c8e2">
 
 Reminder notyfication
 
@@ -43,7 +47,3 @@ Reminder notyfication
 Expired notifications
 
 <img width="613" alt="image" src="https://github.com/Maniek13/ToDoReminder-WPF/assets/47826375/5ce78922-cff1-4ba5-9387-36aee7452b96">
-
-
-
-

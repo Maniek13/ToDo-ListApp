@@ -14,7 +14,7 @@
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <xctk:DateTimePicker Width="300" HorizontalContentAlignment="Left" Grid.Row="0" Padding="0,0,30,0" Margin="0,20,0,20" Value="{Binding ReminderValue.Date}"  />
-                <xctk:RichTextBox Grid.Row="1" MinHeight="80"  x:Name="DescriptionTextBox" Text="{Binding ReminderValue.Description}" >
+                <xctk:RichTextBox Grid.Row="1" MinHeight="80"  x:Name="DescriptionTextBox" Text="{Binding ReminderValue.Description}" MaxWidth="500">
                     <xctk:RichTextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>

@@ -69,7 +69,7 @@ namespace ToDoList.Views
         private void HasReminderCheckBox_Checked(object sender, RoutedEventArgs e)
         {
             ReminderForm.Visibility = Visibility.Visible;
-            ReminderForm.Height = 55;
+            ReminderForm.Height = 140;
         }
         private void HasReminderCheckBox_UnChecked(object sender, RoutedEventArgs e)
         {

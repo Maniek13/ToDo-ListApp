@@ -5,25 +5,31 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              xmlns:helper="clr-namespace:ToDoList.Helper"
-             mc:Ignorable="d" >
+             mc:Ignorable="d">
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
         <WrapPanel Margin="50,50,50,50" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <StackPanel x:Name="AddForm" Margin="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                     <Label Width="80" Height="25" Padding="0,4,0,0">Name:</Label>
-                    <TextBox Height="25" Text="{Binding TaskValue.Name}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black" />
+                    <TextBox Height="25" Text="{Binding TaskValue.Name}" Width="200" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black">
+                    </TextBox>
                 </StackPanel>
                 <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                     <Label Height="25" Width="80" Padding="0,4,0,0">Description:</Label>
-                    <xctk:RichTextBox MinHeight="25" Text="{Binding TaskValue.Description}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black">
+                    <xctk:RichTextBox Height="100" Text="{Binding TaskValue.Description}" Width="200" BorderThickness="0.5,0.5,0.5,0.5" VerticalContentAlignment="Center" BorderBrush="Black" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                         <xctk:RichTextBoxFormatBarManager.FormatBar>
                             <xctk:RichTextBoxFormatBar />
                         </xctk:RichTextBoxFormatBarManager.FormatBar>
+                        <xctk:RichTextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </xctk:RichTextBox.Resources>
                     </xctk:RichTextBox>
                 </StackPanel>
                 <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
                     <Label Height="25" Width="80" Padding="0,4,0,0">Type:</Label>
-                    <ComboBox  Height="25" ItemsSource="{Binding Source={x:Static helper:Resources.TaskTypes}}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding TaskValue.Type}" Width="150" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" Background="{x:Null}"/>
+                    <ComboBox  Height="25" ItemsSource="{Binding Source={x:Static helper:Resources.TaskTypes}}" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding TaskValue.Type}" Width="200" BorderThickness="0.5,0.5,0.5,0.5" VerticalContentAlignment="Center" Background="{x:Null}" BorderBrush="White"/>
                 </StackPanel>
                 <StackPanel>
                     <CheckBox Checked="HasReminderCheckBox_Checked" Unchecked="HasReminderCheckBox_UnChecked" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" IsChecked="{Binding TaskValue.HasReminder}">Reminder</CheckBox>
@@ -32,10 +38,16 @@
                     <xctk:DateTimePicker Value="{Binding ReminderValue.Date}"></xctk:DateTimePicker>
                     <StackPanel Margin="0,0,0,10" Orientation="Horizontal" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                         <Label Height="25" Width="80" Padding="0,4,0,0">Description:</Label>
-                        <TextBox Height="25" Text="{Binding ReminderValue.Description}" MinWidth="150" MaxWidth="300" BorderThickness="0,0,0,0.5" VerticalContentAlignment="Center" BorderBrush="Black" />
+                        <xctk:RichTextBox Margin="0,10,0,10" Text="{Binding ReminderValue.Description}" Width="200" Height="100" BorderThickness="0.5,0.5,0.5,0.5" VerticalContentAlignment="Center" BorderBrush="Black" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                            <xctk:RichTextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </xctk:RichTextBox.Resources>
+                        </xctk:RichTextBox>
                     </StackPanel>
                 </StackPanel>
-                <Button  Click="AddTask_BtnClick" Background="White" BorderThickness="0.7">
+                <Button  Click="AddTask_BtnClick" Background="White" BorderThickness="0.7" Width="100">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>
