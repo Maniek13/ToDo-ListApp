@@ -51,7 +51,7 @@ namespace ToDoList.Helper
                 Description = task.Description,
                 Type = task.Type,
                 HasReminder = task.HasReminder,
-                EndDate= task.EndDate
+                EndDate = task.EndDate
             };
         }
     }
