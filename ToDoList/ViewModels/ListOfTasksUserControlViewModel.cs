@@ -65,7 +65,7 @@ namespace ToDoList.ViewModels
                 {
                     var temp = _tasks.OrderBy(el => el.Name).ToList();
                     _tasks.Clear();
-                    
+
                     temp.ForEach(_tasks.Add);
                 }
                 else
@@ -76,7 +76,30 @@ namespace ToDoList.ViewModels
                     temp.ForEach(_tasks.Add);
                 }
             }
-             catch (Exception ex)
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+        }
+
+        public void SortByDate(bool asc)
+        {
+            try
+            {
+                if (asc)
+                {
+                    var temp = _tasks.OrderBy(el => el.EndDate).ToList();
+                    _tasks.Clear();
+                    temp.ForEach(_tasks.Add);
+                }
+                else
+                {
+                    var temp = _tasks.OrderByDescending(el => el.EndDate).ToList();
+                    _tasks.Clear();
+                    temp.ForEach(_tasks.Add);
+                }
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message, ex);
             }

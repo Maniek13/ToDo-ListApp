@@ -28,7 +28,7 @@ namespace ToDoList.Views
                 ViewModel.GetList();
 
 
-                Style itemContainerStyle = new (typeof(ListBoxItem));
+                Style itemContainerStyle = new(typeof(ListBoxItem));
                 itemContainerStyle.Setters.Add(new Setter(ListBoxItem.AllowDropProperty, true));
                 itemContainerStyle.Setters.Add(new EventSetter(ListBoxItem.PreviewMouseRightButtonDownEvent, new MouseButtonEventHandler(ListOfTasksItem_PreviewMouseRightButtonDown)));
                 itemContainerStyle.Setters.Add(new EventSetter(ListBoxItem.DropEvent, new DragEventHandler(ListOfTasks_Drop)));
@@ -125,6 +125,34 @@ namespace ToDoList.Views
             {
                 mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
                 ViewModel.SortByName(false);
+            }
+            catch (Exception ex)
+            {
+                mainWindow.ErrorMsg.Text = ex.Message;
+                mainWindow.ErrorMsg.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void SortByDateAsc(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+                ViewModel.SortByDate(true);
+            }
+            catch (Exception ex)
+            {
+                mainWindow.ErrorMsg.Text = ex.Message;
+                mainWindow.ErrorMsg.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void SortByDateDesc(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mainWindow.ErrorMsg.Visibility = Visibility.Hidden;
+                ViewModel.SortByDate(false);
             }
             catch (Exception ex)
             {

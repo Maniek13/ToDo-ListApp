@@ -5,11 +5,8 @@ v0.5
 The application allows you to: 
 
 - add task
-
 - edit task
-
 - show list of tasks
-
 - create reminder which be show like a Windows dialog
 
 
@@ -18,20 +15,24 @@ If any notification have been missed, they will appear you at application startu
 v0.51
 
 Added own window to show messages
-
 Added format bar and multiline text field (Format bar will appear when the mouse is released after the selection)
 
 v0.55
 
 Added delete task
-
 Added edit task reminder
 
 v0.6
 
 Added sort by name
-
 Added drop and down function to holds right button to change list order
+
+v0.61
+
+Added sort by date
+
+
+
 
 Main window
 

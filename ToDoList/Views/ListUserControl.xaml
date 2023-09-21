@@ -11,6 +11,14 @@
                 <Button Click="SortByNameDesc" Height="25" Width="25" Background="Transparent" BorderThickness="0" Padding="0" Margin="0">
                     <Image Source="/Views/Icons/up.png"/>
                 </Button>
+                <Border BorderThickness="0.5,0,0,0" BorderBrush="Black" Margin="0,0,5,0"></Border>
+                <TextBlock VerticalAlignment="Center">Sort by end date:</TextBlock>
+                <Button Click="SortByDateAsc" Height="25" Width="25" Background="Transparent" BorderThickness="0" Padding="0" Margin="0">
+                    <Image Source="/Views/Icons/down.png"/>
+                </Button>
+                <Button Click="SortByDateDesc" Height="25" Width="25" Background="Transparent" BorderThickness="0" Padding="0" Margin="0">
+                    <Image Source="/Views/Icons/up.png"/>
+                </Button>
             </StackPanel>
             <DockPanel>
                 <ListView DockPanel.Dock="Top" x:Name="ListOfTasks" ItemsSource="{Binding Tasks}"   VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" BorderThickness="0,0,0,0" AllowDrop="True">
